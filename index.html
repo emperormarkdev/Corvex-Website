@@ -10,13 +10,30 @@
       name="description"
       content="CORVEX is a forward-thinking engineering and energy solutions company delivering innovation, precision, and reliability across oil & gas, industrial, and infrastructure sectors."
     />
+
+    <!-- Canonical: static fallback points at the homepage; seo.jsx updates this
+         same tag per route (matched by rel, so it is never duplicated). -->
+    <link rel="canonical" href="https://corvex-three.vercel.app/" />
+
     <meta property="og:type" content="website" />
     <meta property="og:title" content="CORVEX Engineering & Energy Solutions" />
     <meta
       property="og:description"
       content="Technical services, delivered end to end. Engineering solutions, industrial support, critical operations, HSE and compliance."
     />
-    <meta property="og:image" content="/og-cover.jpg" />
+    <meta property="og:url" content="https://corvex-three.vercel.app/" />
+    <meta property="og:image" content="https://corvex-three.vercel.app/og-cover.jpg" />
+    <meta property="og:site_name" content="Corvex" />
+    <meta property="og:locale" content="en_NG" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CORVEX Engineering & Energy Solutions" />
+    <meta
+      name="twitter:description"
+      content="Technical services, delivered end to end. Engineering solutions, industrial support, critical operations, HSE and compliance."
+    />
+    <meta name="twitter:image" content="https://corvex-three.vercel.app/og-cover.jpg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Display face: Orbitron. Body face below is the Aeonik fallback stack (see src/index.css) -->
@@ -28,10 +45,22 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
+        "@id": "https://corvex-three.vercel.app/#organization",
         "name": "CORVEX",
+        "legalName": "Corvex Engineering & Energy Services Limited",
+        "url": "https://corvex-three.vercel.app/",
+        "logo": "https://corvex-three.vercel.app/favicon.svg",
+        "image": "https://corvex-three.vercel.app/og-cover.jpg",
         "description": "Engineering and energy solutions across oil & gas, industrial, and infrastructure sectors.",
-        "email": "info@corvex.example",
-        "telephone": "+000-000-0000"
+        "email": "info@corvex-energy.ng",
+        "telephone": "+2349040447548",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot 12, Admiralty Way",
+          "addressLocality": "Lekki Phase 1, Lagos",
+          "postalCode": "106104",
+          "addressCountry": "NG"
+        }
       }
     </script>
   </head>

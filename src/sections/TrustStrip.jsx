@@ -27,7 +27,7 @@ export default function TrustStrip() {
                 }}
                 className="stat-cell"
               >
-                <StatCounter value={s.value} suffix={s.suffix} label={s.label} placeholder={s.placeholder} />
+                <StatCounter value={s.value} suffix={s.suffix} label={s.label} />
               </div>
             </Reveal>
           ))}

@@ -5,7 +5,7 @@ import Reveal from "../components/Reveal";
 /**
  * Dark band, blueprint grid background. Left: statement.
  * Right: 4-step process diagram with thin lines + index numbers.
- * Below: capability tags + placeholder standards.
+ * Below: capability tags + aligned standards.
  */
 export default function Approach() {
   return (
@@ -43,7 +43,7 @@ export default function Approach() {
                   <span
                     key={s.value}
                     className="caption"
-                    data-placeholder="standard"
+                   
                     style={{ color: "var(--color-safety)", letterSpacing: ".08em", border: "1px dashed rgba(227,96,28,.5)", padding: "4px 10px" }}
                   >
                     {s.value}

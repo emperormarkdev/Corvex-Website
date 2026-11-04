@@ -1,7 +1,7 @@
 /**
  * Slot → asset map.
  *
- * Single source of truth for real photography. `ImagePlaceholder` looks a slot
+ * Single source of truth for real photography. `ImageSlot` looks a slot
  * up here when no explicit `src` prop is passed, so dropping a file in
  * `public/images/` and adding one line below is all that's needed to go live.
  *

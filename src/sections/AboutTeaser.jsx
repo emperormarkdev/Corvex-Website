@@ -1,6 +1,6 @@
 import { about } from "../content";
 import { TextLink } from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import Reveal from "../components/Reveal";
 
 /**
@@ -51,7 +51,7 @@ export default function AboutTeaser() {
 
           <Reveal delay={0.1} className="about-media">
             <div style={{ position: "relative" }}>
-              <ImagePlaceholder
+              <ImageSlot
                 slot={about.image.slot}
                 src={about.image.src}
                 ratio={about.image.ratio}

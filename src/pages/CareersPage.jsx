@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { careers, careersPage } from "../content";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 
 export default function CareersPage() {
@@ -36,9 +36,9 @@ export default function CareersPage() {
         <div className="wrap">
           <h2 className="h2" style={{ color: "#fff" }}>Life at Corvex</h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginTop: 32 }} className="val-grid">
-            <ImagePlaceholder slot="IMG-LIFE-01" src="/images/Night%20shift%20operations,%20control%20room%20glow.jpg" ratio="1:1" brief="Crew at shift handover" chamfer />
-            <ImagePlaceholder slot="IMG-LIFE-02" src="/images/Workshop%20floor,%20fabrication%20in%20progress.png" ratio="1:1" brief="Workshop training session" chamfer />
-            <ImagePlaceholder slot="IMG-LIFE-03" src="/images/Structural%20steel%20erection,%20daylight.jpg" ratio="1:1" brief="Site walk, daylight" chamfer />
+            <ImageSlot slot="IMG-LIFE-01" src="/images/Night%20shift%20operations,%20control%20room%20glow.jpg" ratio="1:1" brief="Crew at shift handover" chamfer />
+            <ImageSlot slot="IMG-LIFE-02" src="/images/Workshop%20floor,%20fabrication%20in%20progress.png" ratio="1:1" brief="Workshop training session" chamfer />
+            <ImageSlot slot="IMG-LIFE-03" src="/images/Structural%20steel%20erection,%20daylight.jpg" ratio="1:1" brief="Site walk, daylight" chamfer />
           </div>
         </div>
         <style>{`@media (max-width: 900px){ .val-grid{ grid-template-columns: 1fr !important; } }`}</style>
@@ -48,13 +48,15 @@ export default function CareersPage() {
         <div className="wrap">
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: 16 }}>
             <h2 className="h2" style={{ color: "#fff" }}>Open roles</h2>
-            <p className="caption" style={{ color: "var(--color-grey)" }}>All roles are [PLACEHOLDER] listings.</p>
+            <p className="caption" style={{ color: "var(--color-grey)" }}>
+              Roles are added as vacancies are confirmed. Speculative applications are always read.
+            </p>
           </div>
           <div style={{ marginTop: 32, borderTop: "1px solid rgba(255,255,255,.14)" }}>
             {careersPage.openings.map((j, i) => {
               const isOpen = open === i;
               return (
-                <div key={j.title} style={{ borderBottom: "1px solid rgba(255,255,255,.14)" }} data-placeholder="job">
+                <div key={j.title} style={{ borderBottom: "1px solid rgba(255,255,255,.14)" }}>
                   <button
                     onClick={() => setOpen(isOpen ? null : i)}
                     aria-expanded={isOpen}
@@ -111,7 +113,7 @@ export default function CareersPage() {
               <Button href="#/careers/apply?role=Graduate%20Programme">Apply to the programme</Button>
             </div>
           </div>
-          <ImagePlaceholder slot="IMG-GRAD-01" src="/images/Overhead%20Industrial%20Blueprint%20Workshop.png" ratio="4:3" brief="Graduate engineer on site with mentor" chamfer />
+          <ImageSlot slot="IMG-GRAD-01" src="/images/Overhead%20Industrial%20Blueprint%20Workshop.png" ratio="4:3" brief="Graduate engineer on site with mentor" chamfer />
         </div>
         <style>{`@media (max-width: 900px){ .val-grid{ grid-template-columns: 1fr !important; } }`}</style>
       </section>

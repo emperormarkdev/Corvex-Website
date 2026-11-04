@@ -41,11 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: EASE }}
           style={{ maxWidth: 900 }}
         >
-          <p className="eyebrow" style={{ color: "var(--color-safety)", display: "flex", alignItems: "center", gap: 12 }}>
-            <span style={{ display: "inline-block", width: 40, height: 1, background: "var(--color-safety)" }} />
-            {hero.eyebrow}
-          </p>
-          <h1 className="display mt-6" style={{ color: "#fff" }}>
+          <h1 className="display" style={{ color: "#fff" }}>
             {hero.title}
           </h1>
           <p className="body-l mt-6" style={{ color: "rgba(255,255,255,.78)", maxWidth: 620 }}>
@@ -57,7 +53,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Bottom row: scroll cue + technical caption */}
+        {/* Bottom row: scroll cue */}
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginTop: 72 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
             <span style={{ position: "relative", width: 1, height: 56, background: "rgba(255,255,255,.18)", overflow: "hidden" }}>
@@ -65,11 +61,6 @@ export default function Hero() {
             </span>
             <span className="eyebrow" style={{ color: "rgba(255,255,255,.6)" }}>{hero.scrollCue}</span>
           </div>
-          <p className="caption hidden sm:block" style={{ color: "rgba(255,255,255,.55)", letterSpacing: ".1em", textTransform: "uppercase", textAlign: "right" }}>
-            {hero.caption}
-            <br />
-            <span style={{ color: "var(--color-safety)" }}>24.8607° N / 67.0011° E — GRID REF CX-01</span>
-          </p>
         </div>
       </div>
 

@@ -3,9 +3,8 @@ import { useInView, useReducedMotion } from "framer-motion";
 
 /**
  * Orbitron stat counter — counts up once when visible.
- * `stat.placeholder` flags invented figures with data-placeholder.
  */
-export default function StatCounter({ value, suffix = "", label, placeholder }) {
+export default function StatCounter({ value, suffix = "", label }) {
   const ref = useRef(null);
   const rafRef = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
@@ -31,7 +30,7 @@ export default function StatCounter({ value, suffix = "", label, placeholder }) 
   }, [inView, value, reduce]);
 
   return (
-    <div ref={ref} {...(placeholder ? { "data-placeholder": "stat" } : {})}>
+    <div ref={ref}>
       <p
         style={{
           fontFamily: "var(--font-display)",

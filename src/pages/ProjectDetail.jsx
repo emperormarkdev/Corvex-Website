@@ -1,7 +1,7 @@
 import { projects, projectDetail } from "../content";
 import { Link } from "../router";
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 import Button from "../components/Button";
 
@@ -229,8 +229,8 @@ export default function ProjectDetail({ slug }) {
           <h2 className="h2" style={{ color: "#fff" }}>Related projects</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 40 }} className="rel3">
             {others.map((o) => (
-              <Link key={o.slug} to={`/projects/${o.slug}`} className="cx-card chamfer-tr-sm" style={{ display: "block", textDecoration: "none" }} data-placeholder="project">
-                <ImagePlaceholder slot={o.image.slot} src={o.image.src} ratio="16:10" brief={o.image.brief} label={false} />
+              <Link key={o.slug} to={`/projects/${o.slug}`} className="cx-card chamfer-tr-sm" style={{ display: "block", textDecoration: "none" }}>
+                <ImageSlot slot={o.image.slot} src={o.image.src} ratio="16:10" brief={o.image.brief} label={false} />
                 <div style={{ padding: 20 }}>
                   <p className="caption" style={{ color: "var(--color-safety)", letterSpacing: ".08em", textTransform: "uppercase" }}>{o.sector}</p>
                   <p className="h3" style={{ color: "#fff", fontSize: 18, marginTop: 6 }}>{o.name}</p>

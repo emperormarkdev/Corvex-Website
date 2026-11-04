@@ -1,6 +1,6 @@
 import { safety } from "../content";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import Reveal from "../components/Reveal";
 
 /**
@@ -47,7 +47,7 @@ export default function Safety() {
             <Reveal delay={0.18}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "16px 48px", marginTop: 32, alignItems: "center" }}>
                 {safety.stats.map((s) => (
-                  <div key={s.label} data-placeholder={s.placeholder ? "stat" : undefined}>
+                  <div key={s.label}>
                     <p style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 32, color: "#fff" }}>{s.value}</p>
                     <p className="caption" style={{ color: "rgba(255,255,255,.85)", textTransform: "uppercase", letterSpacing: ".08em" }}>{s.label}</p>
                   </div>
@@ -58,7 +58,7 @@ export default function Safety() {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <ImagePlaceholder
+            <ImageSlot
               slot={safety.image.slot}
               src={safety.image.src}
               ratio={safety.image.ratio}

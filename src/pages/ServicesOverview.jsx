@@ -3,7 +3,7 @@ import { services, faqSite, approach } from "../content";
 import { Link } from "../router";
 import Reveal from "../components/Reveal";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { serviceIcons } from "../components/serviceIcons";
 import { PageHero, PageCta, Faq } from "../components/PageBits";
 
@@ -72,7 +72,7 @@ export default function ServicesOverview() {
                     className="cx-card chamfer-tr"
                     style={{ display: "block", textDecoration: "none", height: "100%" }}
                   >
-                    <ImagePlaceholder slot={s.image.slot} src={s.image.src} ratio="16:10" brief={s.image.brief} label={false} />
+                    <ImageSlot slot={s.image.slot} src={s.image.src} ratio="16:10" brief={s.image.brief} label={false} />
                     <div style={{ padding: 24 }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "var(--color-safety)" }}>{s.n}</span>

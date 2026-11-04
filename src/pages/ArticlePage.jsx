@@ -1,6 +1,6 @@
 import { insights, articleBodies } from "../content";
 import { Link } from "../router";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { Crumb, PageCta } from "../components/PageBits";
 import { socials } from "../components/socials";
 
@@ -22,7 +22,7 @@ export default function ArticlePage({ slug }) {
       </header>
 
       <div className="wrap">
-        <ImagePlaceholder slot={a.image.slot} src={a.image.src} ratio="21:9" brief={a.image.brief} alt={a.title} />
+        <ImageSlot slot={a.image.slot} src={a.image.src} ratio="21:9" brief={a.image.brief} alt={a.title} />
       </div>
 
       <article className="section" style={{ background: "#fff", color: "#000" }}>

@@ -4,4 +4,4 @@ Allow: /
 # No crawl restrictions. Private areas are gated at the application level,
 # not by robots rules — robots.txt is not an access control mechanism.
 
-Sitemap: https://www.corvex-energy.ng/sitemap.xml
+Sitemap: https://corvex-three.vercel.app/sitemap.xml

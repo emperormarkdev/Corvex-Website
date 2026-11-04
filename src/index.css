@@ -199,6 +199,19 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
+/* Long-form reading measure: body size with a generous line height and a
+   capped column, used for the narrative paragraphs on inner pages. */
+.prose {
+  font-size: 17px;
+  line-height: 30px;
+  max-width: 68ch;
+}
+@media (max-width: 640px) {
+  .prose {
+    font-size: 16px;
+    line-height: 27px;
+  }
+}
 .body {
   font-size: 16px;
   line-height: 26px;

@@ -150,13 +150,27 @@ export default function ContactPage({ hideHero = false }) {
                   <p className="body" style={{ color: "var(--color-body-dark)", marginTop: 4 }}><a href={site.phone.href} style={{ color: "inherit", textDecoration: "none" }}>{site.phone.value}</a></p>
                   <p className="body" style={{ color: "var(--color-body-dark)" }}><a href={site.email.href} style={{ color: "inherit", textDecoration: "none" }}>{site.email.value}</a></p>
                   <p className="caption" style={{ color: "var(--color-grey)", marginTop: 8 }}>{o.tz}</p>
-                  <p className="caption" style={{ color: "var(--color-grey)", marginTop: 6, fontStyle: "italic" }}>Addresses shown are demonstration details.</p>
                 </div>
               ))}
             </div>
 
-            <div style={{ marginTop: 24, border: "1px solid rgba(255,255,255,.16)", minHeight: 200, display: "flex", alignItems: "center", justifyContent: "center", background: "#0a0a0b" }} role="img" aria-label="Map placeholder showing Corvex office locations">
-              <p className="caption" style={{ color: "var(--color-grey)", letterSpacing: ".1em" }}>MAP PLACEHOLDER — EMBED GOOGLE/MAPBOX</p>
+            <div style={{ marginTop: 24, border: "1px solid rgba(255,255,255,.16)", background: "#0a0a0b", overflow: "hidden" }}>
+              <iframe
+                title="Map showing the Corvex head office in Lekki Phase 1, Lagos"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=3.4330%2C6.4250%2C3.5150%2C6.4590&layer=mapnik&marker=6.4419%2C3.4739"
+                loading="lazy"
+                style={{ display: "block", width: "100%", height: 240, border: 0 }}
+              />
+              <p className="caption" style={{ color: "var(--color-grey)", padding: "10px 12px" }}>
+                <a
+                  href="https://www.openstreetmap.org/?mlat=6.4419&mlon=3.4739#map=15/6.4419/3.4739"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--color-safety)", textDecoration: "none" }}
+                >
+                  View larger map
+                </a>
+              </p>
             </div>
 
             <div style={{ display: "grid", gap: 8, marginTop: 24 }}>

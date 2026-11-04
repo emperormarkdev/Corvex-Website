@@ -6,7 +6,7 @@ import Reveal from "../components/Reveal";
 
 /**
  * Editorial 1-large + 2-medium + 1-wide layout with drag/scroll strip
- * fallback. All project facts are placeholders (data-placeholder).
+  * fallback. Each card links through to its full case study.
  */
 export default function Projects() {
   const trackRef = useRef(null);
@@ -45,7 +45,7 @@ export default function Projects() {
               <Link
                 to={`/projects/${p.slug}`}
                 className="cx-card chamfer-tr-sm"
-                data-placeholder="project"
+               
                 style={{
                   scrollSnapAlign: "start",
                   minWidth: 300,

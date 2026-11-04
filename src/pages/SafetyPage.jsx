@@ -1,7 +1,7 @@
 import { safety, hsePage } from "../content";
 import Reveal from "../components/Reveal";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageCta } from "../components/PageBits";
 
 export default function SafetyPage() {
@@ -55,8 +55,8 @@ export default function SafetyPage() {
         <div className="wrap">
           <h2 className="h2" style={{ color: "#fff" }}>Safety performance</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24, marginTop: 40 }} className="perf-grid">
-            {safety.stats.concat([{ value: "[PLACEHOLDER]", label: "Audits completed" }]).map((s) => (
-              <div key={s.label} data-placeholder="stat" style={{ borderTop: "2px solid var(--color-safety)", paddingTop: 16 }}>
+            {safety.stats.map((s) => (
+              <div key={s.label} style={{ borderTop: "2px solid var(--color-safety)", paddingTop: 16 }}>
                 <p style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 34, color: "#fff" }}>{s.value}</p>
                 <p className="caption" style={{ color: "var(--color-grey)", textTransform: "uppercase", letterSpacing: ".08em", marginTop: 6 }}>{s.label}</p>
               </div>
@@ -69,7 +69,7 @@ export default function SafetyPage() {
       <section className="section" style={{ background: "#000" }}>
         <div className="wrap hse-grid" style={{ display: "grid", gridTemplateColumns: "6fr 6fr", gap: 64, alignItems: "center" }}>
           <Reveal>
-            <ImagePlaceholder slot="IMG-HSE-01" src="/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.png" ratio="4:3" brief="PPE detail, hard hat and gloves" chamfer />
+            <ImageSlot slot="IMG-HSE-01" src="/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.png" ratio="4:3" brief="PPE detail, hard hat and gloves" chamfer />
           </Reveal>
           <div>
             <Reveal>
@@ -99,9 +99,9 @@ export default function SafetyPage() {
           <h2 className="h2" style={{ color: "#fff" }}>Training & certification</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, marginTop: 40 }} className="val-grid">
             {hsePage.training.map((t) => (
-              <div key={t} style={{ border: "1px solid rgba(255,255,255,.14)", padding: 20 }}>
-                <p className="body" style={{ color: "#fff" }}>{t}</p>
-                <p className="caption" data-placeholder="cert" style={{ color: "var(--color-grey)", marginTop: 8 }}>Validity [PLACEHOLDER]</p>
+              <div key={t.name} style={{ border: "1px solid rgba(255,255,255,.14)", padding: 20 }}>
+                <p className="body" style={{ color: "#fff", fontWeight: 600 }}>{t.name}</p>
+                <p className="caption" style={{ color: "var(--color-grey)", marginTop: 8 }}>{t.detail}</p>
               </div>
             ))}
           </div>

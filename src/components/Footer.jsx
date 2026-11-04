@@ -108,7 +108,6 @@ export default function Footer() {
               {footer.contact.lines.map((l) => (
                 <li
                   key={l.label}
-                  {...(l.placeholder ? { "data-placeholder": `contact-${l.label.toLowerCase()}` } : {})}
                 >
                   <p className="caption" style={{ color: "var(--color-grey)", textTransform: "uppercase", letterSpacing: ".1em" }}>
                     {l.label}
@@ -160,7 +159,7 @@ export default function Footer() {
               <span
                 key={c.value}
                 className="caption"
-                data-placeholder="certification"
+               
                 style={{
                   color: "rgba(255,255,255,.55)",
                   border: "1px solid rgba(255,255,255,.18)",

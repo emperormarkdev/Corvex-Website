@@ -1,5 +1,6 @@
 import { PageHero } from "../components/PageBits";
 import Button from "../components/Button";
+import { site } from "../content";
 import ContactPage from "./ContactPage";
 
 export default function ProposalPage() {
@@ -31,8 +32,8 @@ export function SafetyConcernPage() {
             <h2 className="h3" style={{ color: "#fff" }}>How to raise a concern</h2>
             <ul style={{ listStyle: "none", padding: 0, margin: "20px 0 0", display: "grid", gap: 14 }}>
               {[
-                "Call the 24-hour HSE line: [PLACEHOLDER phone].",
-                "Or email hse@corvex.example [PLACEHOLDER] — monitored daily.",
+                `Call the HSE line: ${site.phone.value}.`,
+                `Or email ${site.email.value} — reviewed daily and passed to the HSE Director.`,
                 "You may report anonymously. No retaliation for any report made in good faith.",
               ].map((t) => (
                 <li key={t} className="body" style={{ color: "var(--color-body-dark)", display: "flex", gap: 12 }}>
@@ -42,7 +43,7 @@ export function SafetyConcernPage() {
               ))}
             </ul>
             <div style={{ marginTop: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <Button href="mailto:hse@corvex.example">Email HSE team</Button>
+              <Button href={site.email.href}>Email HSE team</Button>
               <Button href="#/contact" variant="outline">General enquiry</Button>
             </div>
           </div>

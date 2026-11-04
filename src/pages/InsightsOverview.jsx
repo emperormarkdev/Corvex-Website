@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { insights } from "../content";
 import { Link } from "../router";
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 
 const CATS = ["All", "HSE", "Engineering", "Operations"];
@@ -71,8 +71,8 @@ export default function InsightsOverview() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 24, marginTop: 40 }} className="ins-grid2">
             {list.map((a, i) => (
               <Reveal key={a.slug} delay={Math.min(i * 0.05, 0.2)}>
-                <Link to={`/insights/${a.slug}`} className="cx-card-light chamfer-tr-sm" style={{ display: "block", textDecoration: "none", color: "inherit", height: "100%" }} data-placeholder="article">
-                  <ImagePlaceholder slot={a.image.slot} src={a.image.src} ratio="16:10" brief={a.image.brief} label={false} />
+                <Link to={`/insights/${a.slug}`} className="cx-card-light chamfer-tr-sm" style={{ display: "block", textDecoration: "none", color: "inherit", height: "100%" }}>
+                  <ImageSlot slot={a.image.slot} src={a.image.src} ratio="16:10" brief={a.image.brief} label={false} />
                   <div style={{ padding: 24 }}>
                     <p className="caption" style={{ color: "var(--color-signal)", letterSpacing: ".1em", textTransform: "uppercase", fontWeight: 600 }}>{a.category}</p>
                     <h2 style={{ fontSize: 20, fontWeight: 700, lineHeight: 1.35, marginTop: 10 }}>{a.title}</h2>

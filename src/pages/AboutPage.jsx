@@ -1,6 +1,6 @@
 import { about, aboutPage, presence } from "../content";
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 import { LogoStack } from "../components/Logo";
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
           <div style={{ display: "grid", gridTemplateColumns: `repeat(${aboutPage.story.length}, 1fr)`, gap: 24, marginTop: 56 }} className="tl-grid">
             {aboutPage.story.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.06}>
-                <div data-placeholder="milestone" style={{ borderTop: "1px solid rgba(255,255,255,.2)", paddingTop: 20, position: "relative" }}>
+                <div style={{ borderTop: "1px solid rgba(255,255,255,.2)", paddingTop: 20, position: "relative" }}>
                   <span aria-hidden="true" style={{ position: "absolute", top: -4, left: 0, width: 7, height: 7, background: "var(--color-safety)" }} />
                   <p className="caption" style={{ color: "var(--color-safety)", letterSpacing: ".1em", textTransform: "uppercase" }}>{s.year}</p>
                   <p className="h3" style={{ color: "#fff", fontSize: 19, marginTop: 10 }}>{s.title}</p>
@@ -99,8 +99,8 @@ export default function AboutPage() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginTop: 40 }} className="lead-grid">
             {aboutPage.leadership.map((l) => (
               <Reveal key={l.slot}>
-                <article className="cx-card chamfer-tr-sm" data-placeholder="leadership" style={{ overflow: "hidden" }}>
-                  <ImagePlaceholder slot={l.slot} src={l.src} ratio="4:5" brief="Portrait, neutral background" label={false} />
+                <article className="cx-card chamfer-tr-sm" style={{ overflow: "hidden" }}>
+                  <ImageSlot slot={l.slot} src={l.src} ratio="4:5" brief="Portrait, neutral background" label={false} />
                   <div style={{ padding: 20 }}>
                     <p className="h3" style={{ color: "#fff", fontSize: 17 }}>{l.name}</p>
                     <p className="caption" style={{ color: "var(--color-safety)", marginTop: 4, letterSpacing: ".08em", textTransform: "uppercase" }}>{l.role}</p>
@@ -120,7 +120,7 @@ export default function AboutPage() {
           <h2 className="h2" style={{ color: "#fff" }}>{presence.title}</h2>
           <ul style={{ listStyle: "none", margin: "32px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }} className="lead-grid">
             {presence.locations.map((l) => (
-              <li key={l.city} data-placeholder="location" style={{ borderTop: "1px solid rgba(255,255,255,.14)", paddingTop: 16 }}>
+              <li key={l.city} style={{ borderTop: "1px solid rgba(255,255,255,.14)", paddingTop: 16 }}>
                 <p style={{ color: "#fff", fontWeight: 600 }}>{l.city}</p>
                 <p className="caption" style={{ color: "var(--color-grey)", marginTop: 4 }}>{l.country}</p>
               </li>

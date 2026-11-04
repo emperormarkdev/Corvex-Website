@@ -73,7 +73,6 @@ export default function Presence() {
             {presence.locations.map((l, i) => (
               <Reveal key={l.city} delay={i * 0.06}>
                 <li
-                  data-placeholder={l.placeholder ? "location" : undefined}
                   style={{
                     display: "flex",
                     gap: 16,

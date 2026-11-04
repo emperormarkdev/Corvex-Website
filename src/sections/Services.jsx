@@ -18,16 +18,7 @@ export default function Services() {
   return (
     <section id="services" aria-label="Services" style={{ background: "#000" }}>
       <div className="wrap section">
-        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", justifyContent: "space-between", gap: 24 }}>
-          <SectionHeader index={services.index} title={services.title} intro={services.intro} />
-          <Reveal delay={0.15}>
-            <p className="caption hidden md:block" style={{ color: "var(--color-grey)", letterSpacing: ".1em", textAlign: "right" }}>
-              HOVER A LINE — PREVIEW SCOPE
-              <br />
-              <span style={{ color: "var(--color-safety)" }}>06 SERVICE LINES / 01 ACCOUNTABLE PARTNER</span>
-            </p>
-          </Reveal>
-        </div>
+        <SectionHeader index={services.index} title={services.title} intro={services.intro} />
 
         <div style={{ display: "grid", gridTemplateColumns: "7fr 5fr", gap: 24, marginTop: 56 }} className="svc-layout">
           {/* Service rows */}
@@ -109,15 +100,11 @@ export default function Services() {
                   transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 >
                   <PreviewSlot s={active} />
-                  <div className="hairline-t" style={{ marginTop: 20, paddingTop: 16, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div className="hairline-t" style={{ marginTop: 20, paddingTop: 16 }}>
                     <p className="eyebrow" style={{ color: "#fff" }}>{active.n} / {active.name}</p>
-                    <p className="caption" style={{ color: "var(--color-safety)" }}>EXPLORE →</p>
                   </div>
                 </motion.div>
               </AnimatePresence>
-              <p className="caption" style={{ color: "var(--color-grey)", marginTop: 16 }}>
-                Previews are representative. Final scope imagery is issued per contract data pack.
-              </p>
             </div>
           </div>
         </div>

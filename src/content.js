@@ -18,8 +18,10 @@
  * composes, so they are kept in step with the display values. If the monitored
  * mailbox changes, update `value` and `href` together.
  */
+import { SITE_NAME, SITE_URL } from "./config/site";
+
 export const site = {
-  name: "CORVEX",
+  name: SITE_NAME,
   legalName: "Corvex Engineering & Energy Services Limited",
   tagline: "Engineering & Energy Solutions",
   email: {
@@ -34,7 +36,11 @@ export const site = {
     value: "Plot 12, Admiralty Way, Lekki Phase 1, Lagos 106104, Nigeria",
   },
   founded: "2010",
-  baseUrl: "https://www.corvex-energy.ng",
+  /**
+   * Canonical origin used for canonical tags, og:url, breadcrumbs and JSON-LD.
+   * Re-exported from src/config/site.js so the domain is defined in one place.
+   */
+  baseUrl: SITE_URL,
 };
 
 export const nav = {
@@ -657,7 +663,6 @@ export const insights = {
       excerpt:
         "Re-audits are where integrity programmes earn their keep. First passes see what they were briefed to see; second passes see what was missed.",
       image: { slot: "IMG-NEWS-02", ratio: "16:9", brief: "Ultrasonic inspection close-up", src: "/images/Process%20skids%20and%20pipe%20racks.jpg" },
-      placeholder: true,
     },
     {
       category: "Operations",
@@ -1592,14 +1597,38 @@ export const hsePage = {
     { n: "04", name: "Learning loop", desc: "Near-miss reporting rewarded and lessons shared across sites, not filed." },
   ],
   training: [
-    "HSE induction and site orientation",
-    "Permit-to-work and lock-out / tag-out (LOTO)",
-    "Working at height and confined-space entry",
-    "First aid and emergency response",
-    "Hazard identification and risk assessment",
-    "Incident investigation and root cause analysis",
-    "Manual handling and lifting operations",
-    "Environmental awareness and spill response",
+    {
+      name: "HSE induction and site orientation",
+      detail: "Facility-specific induction covering site hazards, emergency arrangements, muster points and reporting routes.",
+    },
+    {
+      name: "Permit-to-work and lock-out / tag-out",
+      detail: "Raised on the issuing and receiving side, including isolation verification and permit closure discipline.",
+    },
+    {
+      name: "Working at height and confined-space entry",
+      detail: "Fall protection, access equipment, atmospheric testing, standby arrangements and rescue planning.",
+    },
+    {
+      name: "First aid and emergency response",
+      detail: "Role-based first aid, spill response, fire response and evacuation drills rehearsed on site.",
+    },
+    {
+      name: "Hazard identification and risk assessment",
+      detail: "Task-level assessment methods that a supervisor can apply at the workfront before work starts.",
+    },
+    {
+      name: "Incident investigation and root cause analysis",
+      detail: "Structured investigation, evidence handling and corrective action tracking to verified closure.",
+    },
+    {
+      name: "Manual handling and lifting operations",
+      detail: "Lift planning, rigging, load control and the roles required for a planned lift.",
+    },
+    {
+      name: "Environmental awareness and spill response",
+      detail: "Waste segregation, containment, bund management and first response to a release.",
+    },
   ],
   riskManagement: [
     "Job hazard analysis completed and signed before every task.",

@@ -1,6 +1,6 @@
 import { careers } from "../content";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import Reveal from "../components/Reveal";
 
 /**
@@ -12,7 +12,7 @@ export default function Careers() {
       <div className="wrap section">
         <div style={{ display: "grid", gridTemplateColumns: "5fr 7fr", gap: 64, alignItems: "center" }} className="car-grid">
           <Reveal>
-            <ImagePlaceholder
+            <ImageSlot
               slot={careers.image.slot}
               src={careers.image.src}
               ratio={careers.image.ratio}

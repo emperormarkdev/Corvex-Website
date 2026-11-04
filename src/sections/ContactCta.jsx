@@ -4,7 +4,7 @@ import Reveal from "../components/Reveal";
 
 /**
  * Red full-width band with the chamfered diagonal motif.
- * White primary button, outlined secondary, placeholder contact lines.
+ * White primary button, outlined secondary, direct contact lines.
  */
 export default function ContactCta() {
   return (
@@ -32,10 +32,10 @@ export default function ContactCta() {
           </Reveal>
           <Reveal delay={0.22}>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 40px", marginTop: 40 }} className="hairline-t" >
-              <p className="body" style={{ paddingTop: 20, color: "#fff" }} data-placeholder="contact-email">
+              <p className="body" style={{ paddingTop: 20, color: "#fff" }}>
                 <span style={{ opacity: 0.7 }}>Email — </span>{site.email.value}
               </p>
-              <p className="body" style={{ paddingTop: 20, color: "#fff" }} data-placeholder="contact-phone">
+              <p className="body" style={{ paddingTop: 20, color: "#fff" }}>
                 <span style={{ opacity: 0.7 }}>Phone — </span>{site.phone.value}
               </p>
             </div>

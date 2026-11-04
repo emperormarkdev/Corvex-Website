@@ -55,7 +55,7 @@ export default function InnovationPage() {
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 32 }}>
             {approach.standards.map((s) => (
-              <span key={s.value} data-placeholder="standard" style={{ border: "1px solid rgba(255,255,255,.22)", padding: "10px 16px", color: "var(--color-safety)", fontFamily: "var(--font-display)", fontSize: 12, letterSpacing: ".1em" }}>
+              <span key={s.value} style={{ border: "1px solid rgba(255,255,255,.22)", padding: "10px 16px", color: "var(--color-safety)", fontFamily: "var(--font-display)", fontSize: 12, letterSpacing: ".1em" }}>
                 {s.value}
               </span>
             ))}

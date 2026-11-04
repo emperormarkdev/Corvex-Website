@@ -1,6 +1,6 @@
 import { Link } from "../router";
 import Button from "../components/Button";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import Reveal from "../components/Reveal";
 
 /** Breadcrumb: Home / Section / Page */
@@ -52,7 +52,7 @@ export function PageHero({ index, title, intro, image, breadcrumb, dark = true }
           </div>
           {image && (
             <Reveal delay={0.1}>
-              <ImagePlaceholder slot={image.slot} src={image.src} ratio={image.ratio} brief={image.brief} alt={image.brief} chamfer />
+              <ImageSlot slot={image.slot} src={image.src} ratio={image.ratio} brief={image.brief} alt={image.brief} chamfer />
             </Reveal>
           )}
         </div>

@@ -9,6 +9,7 @@ import {
   articleBodies,
 } from "./content";
 import { segments } from "./routerCore";
+import { SITE_URL } from "./config/site";
 
 /**
  * Per-route document metadata.
@@ -24,6 +25,18 @@ import { segments } from "./routerCore";
  */
 
 const TITLE_SUFFIX = "CORVEX — Engineering & Energy Solutions";
+
+/**
+ * Canonical origin for the current deployment.
+ *
+ * Driven by src/config/site.js (SITE_URL, overridable via VITE_SITE_URL).
+ * Applied unconditionally — never window.location — so canonicals, og:url and
+ * JSON-LD always name the intended deployment (corvex-three.vercel.app) even
+ * when the same build is served from a Vercel preview URL.
+ */
+function baseUrlFor() {
+  return SITE_URL || site.baseUrl;
+}
 
 const SERVICE_KEYWORDS = {
   "engineering-solutions": "engineering design, FEED, brownfield modification, inspection engineering",
@@ -221,7 +234,11 @@ function setMeta(selector, attrs) {
 }
 
 function setLink(rel, href) {
-  let el = document.head.querySelector(`link[rel="${rel}"][data-seo]`);
+  // Reuse the static tag from index.html first (matched without data-seo) so a
+  // canonical declared in the head is updated in place rather than duplicated.
+  let el =
+    document.head.querySelector(`link[rel="${rel}"][data-seo]`) ||
+    document.head.querySelector(`link[rel="${rel}"]`);
   if (!el) {
     el = document.createElement("link");
     el.setAttribute("rel", rel);
@@ -231,14 +248,14 @@ function setLink(rel, href) {
   el.setAttribute("href", href);
 }
 
-function organizationSchema() {
+function organizationSchema(base) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
     legalName: site.legalName,
-    url: site.baseUrl,
-    logo: `${site.baseUrl}/favicon.svg`,
+    url: base,
+    logo: `${base}/favicon.svg`,
     description:
       "Engineering and energy services company providing engineering solutions, industrial support, critical operations, infrastructure construction, oil and gas support and HSE compliance services.",
     email: site.email.value,
@@ -266,13 +283,13 @@ function organizationSchema() {
   };
 }
 
-function breadcrumbSchema(meta) {
+function breadcrumbSchema(meta, base) {
   const parts = meta.path.split("/").filter(Boolean);
-  const items = [{ name: "Home", item: site.baseUrl + "/" }];
+  const items = [{ name: "Home", item: base + "/" }];
   let acc = "";
   for (const p of parts) {
     acc += "/" + p;
-    items.push({ name: p.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), item: site.baseUrl + acc });
+    items.push({ name: p.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()), item: base + acc });
   }
   return {
     "@context": "https://schema.org",
@@ -286,20 +303,20 @@ function breadcrumbSchema(meta) {
   };
 }
 
-function serviceSchema(base, detail) {
+function serviceSchema(service, detail, origin) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: base.name,
-    serviceType: base.name,
-    description: detail?.overview || base.desc,
-    provider: { "@type": "Organization", name: site.name, url: site.baseUrl },
+    name: service.name,
+    serviceType: service.name,
+    description: detail?.overview || service.desc,
+    provider: { "@type": "Organization", name: site.name, url: origin },
     areaServed: { "@type": "Country", name: "Nigeria" },
-    url: `${site.baseUrl}/services/${base.slug}`,
+    url: `${origin}/services/${service.slug}`,
   };
 }
 
-function articleSchema(a) {
+function articleSchema(a, origin) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -307,7 +324,7 @@ function articleSchema(a) {
     description: a.excerpt,
     articleSection: a.category,
     publisher: { "@type": "Organization", name: site.name },
-    mainEntityOfPage: `${site.baseUrl}/insights/${a.slug}`,
+    mainEntityOfPage: `${origin}/insights/${a.slug}`,
   };
 }
 
@@ -319,8 +336,9 @@ export default function Seo({ route }) {
     const meta = metaFor(route);
     if (!meta) return;
 
-    const url = site.baseUrl + (meta.path === "/" ? "/" : meta.path);
-    const ogImage = `${site.baseUrl}/og-cover.jpg`;
+    const base = baseUrlFor();
+    const url = base + (meta.path === "/" ? "/" : meta.path);
+    const ogImage = `${base}/og-cover.jpg`;
 
     document.title = meta.title;
 
@@ -349,9 +367,9 @@ export default function Seo({ route }) {
       script.id = "cx-schema";
       document.head.appendChild(script);
     }
-    const graph = [organizationSchema(), breadcrumbSchema(meta)];
-    if (meta.service) graph.push(serviceSchema(meta.service, serviceDetail[meta.service.slug]));
-    if (meta.article) graph.push(articleSchema(meta.article));
+    const graph = [organizationSchema(base), breadcrumbSchema(meta, base)];
+    if (meta.service) graph.push(serviceSchema(meta.service, serviceDetail[meta.service.slug], base));
+    if (meta.article) graph.push(articleSchema(meta.article, base));
     if (meta.project) {
       graph.push({
         "@context": "https://schema.org",

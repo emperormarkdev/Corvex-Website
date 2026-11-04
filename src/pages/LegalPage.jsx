@@ -8,7 +8,8 @@ const COPY = {
     sections: [
       ["Data we collect", "Name, company, email, phone, and message content submitted via contact and application forms. Essential cookie identifiers."],
       ["How we use it", "To respond to enquiries, assess applications, and meet contractual and legal obligations. We do not sell personal data."],
-      ["Retention", "Enquiry records are retained for [PLACEHOLDER] period, then deleted unless a contract requires otherwise."],
+      ["Retention", "Enquiry records are kept only for as long as needed to respond and to meet contractual or legal obligations, then deleted."],
+      ["Sharing", "Personal data is shared only with the parties required to deliver a contracted service, and never sold."],
       ["Your rights", "You may request access, correction, or deletion of your data by contacting " + site.email.value + "."],
       ["Contact", "For privacy questions, write to " + site.email.value + "."],
     ],
@@ -19,8 +20,7 @@ const COPY = {
     sections: [
       ["Use of this site", "You may view and reference this site for legitimate business evaluation. Content may not be reproduced commercially without written permission."],
       ["No warranty", "Content is provided for information only. Engineering services are governed solely by executed contracts."],
-      ["Placeholder content", "Figures, projects, clients, certifications, and locations marked [PLACEHOLDER] are illustrative and are not claims."],
-      ["Governing law", "These terms are governed by the laws of [PLACEHOLDER] jurisdiction."],
+      ["Governing law", "These terms are governed by the laws of the Federal Republic of Nigeria."],
     ],
   },
   "cookie-policy": {
@@ -48,7 +48,7 @@ export default function LegalPage({ slug }) {
             </div>
           ))}
           <p className="caption" style={{ color: "var(--color-ash)", marginTop: 24 }}>
-            Last updated [PLACEHOLDER]. This document is a template and should be reviewed by counsel before launch.
+            Last updated 4 November 2026 · {site.legalName}
           </p>
         </div>
       </section>

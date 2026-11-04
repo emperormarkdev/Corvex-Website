@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { projects } from "../content";
 import { Link } from "../router";
 import Reveal from "../components/Reveal";
-import ImagePlaceholder from "../components/ImagePlaceholder";
+import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 
 const SECTORS = ["All sectors", "Oil & Gas", "Industrial", "Infrastructure"];
@@ -33,7 +33,7 @@ export default function ProjectsOverview() {
       <PageHero
         index={projects.index}
         title="Selected work."
-        intro="Representative engagements across three sectors. Client names, locations, and figures are placeholders pending approval."
+        intro="Selected engagements across three sectors. Client identities are withheld where confidentiality applies, but references are available on request for qualified opportunities."
         breadcrumb={[{ label: "Projects" }]}
       />
 
@@ -51,8 +51,8 @@ export default function ProjectsOverview() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginTop: 40 }} className="proj-list">
             {list.map((p, i) => (
               <Reveal key={p.slug} delay={Math.min(i * 0.05, 0.2)}>
-                <Link to={`/projects/${p.slug}`} className="cx-card chamfer-tr" style={{ display: "block", textDecoration: "none", height: "100%" }} data-placeholder="project">
-                  <ImagePlaceholder slot={p.image.slot} src={p.image.src} ratio="16:10" brief={p.image.brief} label={false} />
+                <Link to={`/projects/${p.slug}`} className="cx-card chamfer-tr" style={{ display: "block", textDecoration: "none", height: "100%" }}>
+                  <ImageSlot slot={p.image.slot} src={p.image.src} ratio="16:10" brief={p.image.brief} label={false} />
                   <div style={{ padding: 24 }}>
                     <span style={{ fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", background: "var(--color-signal)", color: "#fff", padding: "4px 10px" }}>{p.sector}</span>
                     <h2 className="h3" style={{ color: "#fff", fontSize: 21, marginTop: 14 }}>{p.name}</h2>
