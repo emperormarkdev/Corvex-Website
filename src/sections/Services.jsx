@@ -122,7 +122,7 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <style>{`@media (max-width: 1023px){ .svc-layout{ grid-template-columns: 1fr !important; } .svc-preview{ display: none; } .svc-inline-img{ display: block !important; } .svc-name{ font-size: 20px !important; } }`}</style>
+      <style>{`@media (max-width: 1023px){ .svc-layout{ grid-template-columns: 1fr !important; } .svc-preview{ display: none; } .svc-inline-img{ display: block !important; } .svc-name{ font-size: 20px !important; } } @media (max-width: 640px){ .svc-row{ padding: 20px 16px !important; gap: 16px !important; } .svc-row > span > span > span{ min-width: 0; } }`}</style>
     </section>
   );
 }

@@ -19,7 +19,7 @@ export default function Hero() {
             src="/images/hero-refinery.png"
             alt=""
             className={reduce ? undefined : "hero-drift"}
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", maxWidth: "100%" }}
           />
         </div>
         {/* Red duotone ~60% */}

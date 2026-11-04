@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieBar from "./components/CookieBar";
-import Logo from "./components/Logo";
 import Hero from "./sections/Hero";
 import TrustStrip from "./sections/TrustStrip";
 import AboutTeaser from "./sections/AboutTeaser";
@@ -93,44 +91,6 @@ function resolve(route) {
 
 export default function App() {
   const route = useRoute();
-  const [loading, setLoading] = useState(() => {
-    try {
-      return !sessionStorage.getItem("corvex-seen");
-    } catch {
-      return true;
-    }
-  });
-
-  useEffect(() => {
-    if (!loading) return;
-    const t = setTimeout(() => {
-      setLoading(false);
-      try {
-        sessionStorage.setItem("corvex-seen", "1");
-      } catch {
-        /* ignore */
-      }
-    }, 1000);
-    return () => clearTimeout(t);
-  }, [loading]);
-
-  if (loading) {
-    return (
-      <div
-        role="status"
-        aria-label="Loading Corvex"
-        style={{ position: "fixed", inset: 0, zIndex: 100, background: "#000", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}
-      >
-        <span style={{ color: "#E3601C", width: 84, display: "block" }}>
-          <Logo className="w-full h-auto" />
-        </span>
-        <span style={{ display: "block", width: 120, height: 2, background: "rgba(255,255,255,.15)", overflow: "hidden" }}>
-          <span style={{ display: "block", height: "100%", width: "100%", background: "var(--color-signal)", transformOrigin: "left", animation: "cxload 1s cubic-bezier(.22,1,.36,1) forwards" }} />
-        </span>
-        <style>{`@keyframes cxload{ from{ transform: scaleX(0);} to{ transform: scaleX(1);} }`}</style>
-      </div>
-    );
-  }
 
   return (
     <>

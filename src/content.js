@@ -7,12 +7,36 @@
  * attribute so it can be found and replaced with approved copy.
  */
 
+/**
+ * DEMONSTRATION CONTACT DETAILS — NOT VERIFIED COMPANY INFORMATION.
+ *
+ * The display values below are fictional, written for this demo build. The
+ * `href` targets are the live destinations the owner asked to be wired up, so
+ * clicks actually dial / compose. Before public launch, replace both the
+ * display values AND the hrefs with the real company details, and delete the
+ * `demonstration` flags so nothing here can be mistaken for a verified
+ * business record.
+ */
 export const site = {
   name: "CORVEX",
   tagline: "Engineering & Energy Solutions",
-  email: { value: "info@corvex.example", placeholder: true },
-  phone: { value: "+000 000 0000", placeholder: true },
-  hq: { value: "Plot 00, Energy District [PLACEHOLDER]", placeholder: true },
+  email: {
+    value: "info@corvex-energy.ng", // demonstration display value
+    href: "mailto:emprormarktech@gmail.com",
+    placeholder: true,
+    demonstration: true,
+  },
+  phone: {
+    value: "+234 904 044 7548", // demonstration display value
+    href: "tel:+2349040447548",
+    placeholder: true,
+    demonstration: true,
+  },
+  hq: {
+    value: "Plot 12, Admiralty Way, Lekki Phase 1, Lagos 106104, Nigeria", // demonstration
+    placeholder: true,
+    demonstration: true,
+  },
 };
 
 export const nav = {
@@ -332,9 +356,9 @@ export const footer = {
   contact: {
     title: "Contact",
     lines: [
-      { label: "Address", value: "Plot 00, Energy District [PLACEHOLDER]", placeholder: true },
-      { label: "Email", value: "info@corvex.example", placeholder: true },
-      { label: "Phone", value: "+000 000 0000", placeholder: true },
+      { label: "Address", value: site.hq.value, placeholder: true },
+      { label: "Email", value: site.email.value, href: site.email.href, placeholder: true },
+      { label: "Phone", value: site.phone.value, href: site.phone.href, placeholder: true },
     ],
   },
   legal: ["Privacy", "Terms"],

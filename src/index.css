@@ -146,6 +146,25 @@ body {
   padding-block: var(--section-y);
 }
 
+/**
+ * Grid/flex safety net.
+ *
+ * A `fr` track resolves its minimum to `min-content`, so a single wide child
+ * (an aspect-ratio image with a min-height, a long unbroken word, a pill row)
+ * can push a track past the viewport and force horizontal scroll on phones.
+ * Opting every grid child out of the implicit `min-width: auto` lets tracks
+ * shrink to the space actually available.
+ *
+ * Matches the `*-grid` / `*-layout` / `*-split` class names used by the
+ * section-level grids, plus `.wrap`'s direct children on the inner pages.
+ */
+[class*="grid"] > *,
+[class*="layout"] > *,
+[class*="split"] > *,
+[class*="-row"] > * {
+  min-width: 0;
+}
+
 /* ---------- Type scale ---------- */
 .display {
   font-family: var(--font-display);
@@ -242,6 +261,9 @@ body {
 /* ---------- Image placeholder ---------- */
 .img-slot {
   position: relative;
+  /* An aspect-ratio box with a min-height derives a wider width than it is
+     allowed to be; the cap keeps it inside its track on narrow viewports. */
+  max-width: 100%;
   background-color: var(--color-slot);
   border: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;

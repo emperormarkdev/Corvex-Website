@@ -113,7 +113,13 @@ export default function Footer() {
                   <p className="caption" style={{ color: "var(--color-grey)", textTransform: "uppercase", letterSpacing: ".1em" }}>
                     {l.label}
                   </p>
-                  <p style={{ color: "#fff", fontSize: 15, marginTop: 4 }}>{l.value}</p>
+                  {l.href ? (
+                    <a href={l.href} style={{ color: "#fff", fontSize: 15, marginTop: 4, display: "inline-block", textDecoration: "none" }}>
+                      {l.value}
+                    </a>
+                  ) : (
+                    <p style={{ color: "#fff", fontSize: 15, marginTop: 4 }}>{l.value}</p>
+                  )}
                 </li>
               ))}
             </ul>

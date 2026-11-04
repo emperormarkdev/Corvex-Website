@@ -59,7 +59,6 @@ export default function AboutTeaser() {
                 alt="Corvex field engineer reviewing asset data on site"
                 chamfer
                 label={false}
-                style={{ minHeight: 480 }}
               />
               <div
                 style={{

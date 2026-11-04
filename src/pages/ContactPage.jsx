@@ -45,6 +45,9 @@ export default function ContactPage({ hideHero = false }) {
       return;
     }
     setSent(true);
+    // No backend on a static deploy: hand the enquiry to the visitor's mail
+    // client with everything pre-filled so the enquiry still reaches us.
+    window.location.href = composeMailto(form);
   };
 
   return (
@@ -67,7 +70,7 @@ export default function ContactPage({ hideHero = false }) {
                   Thank you, {form.name.split(" ")[0]}. A technical lead will reply within two business days.
                 </p>
                 <p className="caption mt-4" style={{ color: "var(--color-grey)" }}>
-                  Demo form — connect to your CRM or mail endpoint before launch.
+                  This opens in your email client with everything filled in, addressed to {site.email.value}.
                 </p>
                 <button
                   onClick={() => {
@@ -137,16 +140,17 @@ export default function ContactPage({ hideHero = false }) {
             <h2 className="h3" style={{ color: "#fff" }}>Offices</h2>
             <div style={{ display: "grid", gap: 16, marginTop: 20 }}>
               {[
-                { city: "[PLACEHOLDER] HQ", type: "Head Office", addr: "Plot 00, Energy District", tz: "Sun–Thu, 08:00–17:00" },
-                { city: "[PLACEHOLDER] West", type: "Regional Office", addr: "Unit 00, Industrial Park", tz: "Mon–Fri, 08:00–17:00" },
+                { city: "Lagos — Head Office", type: "Head Office", addr: site.hq.value, tz: "Mon–Fri, 08:00–17:00" },
+                { city: "Port Harcourt — Regional Office", type: "Regional Office", addr: "Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria", tz: "Mon–Fri, 08:00–17:00" },
               ].map((o) => (
-                <div key={o.city} data-placeholder="office" style={{ border: "1px solid rgba(255,255,255,.16)", padding: 20 }}>
+                <div key={o.city} style={{ border: "1px solid rgba(255,255,255,.16)", padding: 20 }}>
                   <p className="caption" style={{ color: "var(--color-safety)", letterSpacing: ".1em", textTransform: "uppercase" }}>{o.type}</p>
                   <p style={{ color: "#fff", fontWeight: 600, marginTop: 6 }}>{o.city}</p>
                   <p className="body" style={{ color: "var(--color-body-dark)", marginTop: 6 }}>{o.addr}</p>
-                  <p className="body" style={{ color: "var(--color-body-dark)" }}>{site.phone.value}</p>
-                  <p className="body" style={{ color: "var(--color-body-dark)" }}>{site.email.value}</p>
+                  <p className="body" style={{ color: "var(--color-body-dark)", marginTop: 4 }}><a href={site.phone.href} style={{ color: "inherit", textDecoration: "none" }}>{site.phone.value}</a></p>
+                  <p className="body" style={{ color: "var(--color-body-dark)" }}><a href={site.email.href} style={{ color: "inherit", textDecoration: "none" }}>{site.email.value}</a></p>
                   <p className="caption" style={{ color: "var(--color-grey)", marginTop: 8 }}>{o.tz}</p>
+                  <p className="caption" style={{ color: "var(--color-grey)", marginTop: 6, fontStyle: "italic" }}>Addresses shown are demonstration details.</p>
                 </div>
               ))}
             </div>
@@ -165,6 +169,29 @@ export default function ContactPage({ hideHero = false }) {
       </section>
     </>
   );
+}
+
+function composeMailto(form) {
+  const subject = encodeURIComponent(
+    `Project enquiry — ${form.company || "CORVEX"} — ${form.service || "General"}`
+  );
+  const body = encodeURIComponent(
+    [
+      `Name: ${form.name}`,
+      `Company: ${form.company}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || "—"}`,
+      `Service of interest: ${form.service || "—"}`,
+      `Sector: ${form.sector || "—"}`,
+      "",
+      "Message:",
+      form.message,
+      "",
+      "---",
+      "Sent via corvex-site contact form (demonstration deployment)",
+    ].join("\n")
+  );
+  return `mailto:${site.email.href.replace("mailto:", "")}?subject=${subject}&body=${body}`;
 }
 
 function Field({ id, label, required, error, children }) {
