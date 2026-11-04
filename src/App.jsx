@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieBar from "./components/CookieBar";
 import Hero from "./sections/Hero";
+import Seo from "./seo";
 import TrustStrip from "./sections/TrustStrip";
 import AboutTeaser from "./sections/AboutTeaser";
 import Services from "./sections/Services";
@@ -94,6 +95,7 @@ export default function App() {
 
   return (
     <>
+      <Seo route={route} />
       <a href="#main" className="skip-link">Skip to content</a>
       <Nav />
       <main id="main">{resolve(route)}</main>

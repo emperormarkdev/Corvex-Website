@@ -33,7 +33,14 @@ export default function ServiceDetail({ slug }) {
         <div className="wrap" style={{ display: "grid", gridTemplateColumns: "7fr 4fr", gap: 64, alignItems: "start" }} id="svc-body">
           <div>
             <Reveal>
-              <h2 className="h2" style={{ color: "#fff" }}>Scope of work</h2>
+              <p className="eyebrow" style={{ color: "var(--color-safety)" }}>Overview</p>
+              <p className="body-l" style={{ color: "var(--color-body-dark)", marginTop: 16 }}>
+                {detail.intro || detail.overview}
+              </p>
+            </Reveal>
+
+            <Reveal>
+              <h2 className="h2" style={{ color: "#fff", marginTop: 56 }}>Scope of work</h2>
             </Reveal>
             <ul style={{ listStyle: "none", margin: "32px 0 0", padding: 0 }}>
               {detail.scope.map((s, i) => (
@@ -46,6 +53,23 @@ export default function ServiceDetail({ slug }) {
               ))}
               <li style={{ borderTop: "1px solid rgba(255,255,255,.12)" }} />
             </ul>
+
+            {detail.subservices?.length > 0 && (
+              <Reveal>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Subservices</h2>
+                <div className="rel-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 24 }}>
+                  {detail.subservices.map((s, i) => (
+                    <div key={s.name} className="cx-card" style={{ padding: 20 }}>
+                      <p className="caption" style={{ color: "var(--color-safety)", letterSpacing: ".1em" }}>
+                        {String(i + 1).padStart(2, "0")}
+                      </p>
+                      <p className="h3" style={{ color: "#fff", fontSize: 17, marginTop: 8, lineHeight: 1.3 }}>{s.name}</p>
+                      <p className="body" style={{ color: "var(--color-body-dark)", marginTop: 8 }}>{s.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            )}
 
             <Reveal delay={0.1}>
               <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Key capabilities</h2>
@@ -71,6 +95,69 @@ export default function ServiceDetail({ slug }) {
                 ))}
               </ol>
             </Reveal>
+
+            {detail.standards?.length > 0 && (
+              <Reveal delay={0.1}>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Standards applied</h2>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
+                  {detail.standards.map((s) => (
+                    <span key={s} style={{ fontSize: 14, color: "#fff", borderBottom: "1px solid var(--color-safety)", paddingBottom: 4 }}>
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </Reveal>
+            )}
+
+            {detail.equipment?.length > 0 && (
+              <Reveal delay={0.1}>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Equipment & technology</h2>
+                <ul style={{ listStyle: "none", margin: "20px 0 0", padding: 0, display: "grid", gap: 8 }}>
+                  {detail.equipment.map((e) => (
+                    <li key={e} className="body" style={{ color: "var(--color-body-dark)", paddingLeft: 18, position: "relative" }}>
+                      <span style={{ position: "absolute", left: 0, top: 11, width: 6, height: 6, background: "var(--color-safety)" }} aria-hidden="true" />
+                      {e}
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            )}
+
+            {detail.sectors?.length > 0 && (
+              <Reveal delay={0.1}>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Industries & sectors served</h2>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginTop: 20 }}>
+                  {detail.sectors.map((s) => (
+                    <span key={s} className="body" style={{ color: "#fff", border: "1px solid rgba(255,255,255,.25)", padding: "8px 14px" }}>
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </Reveal>
+            )}
+
+            {detail.qa && (
+              <Reveal delay={0.1}>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Quality assurance</h2>
+                <p className="body-l" style={{ color: "var(--color-body-dark)", marginTop: 20 }}>
+                  {detail.qa}
+                </p>
+              </Reveal>
+            )}
+
+            {detail.outcomes?.length > 0 && (
+              <Reveal delay={0.1}>
+                <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>What you can expect</h2>
+                <ul style={{ listStyle: "none", margin: "20px 0 0", padding: 0, display: "grid", gap: 12 }}>
+                  {detail.outcomes.map((o) => (
+                    <li key={o} style={{ display: "flex", gap: 16, alignItems: "baseline", color: "#fff" }}>
+                      <Check />
+                      <span className="body">{o}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            )}
 
             <Reveal delay={0.1}>
               <h2 className="h3" style={{ color: "#fff", marginTop: 64 }}>Related projects</h2>
@@ -108,7 +195,7 @@ export default function ServiceDetail({ slug }) {
                 <Button href="#/downloads/capability-statement" variant="outline">Capability statement (PDF)</Button>
               </div>
               <p className="caption" style={{ color: "var(--color-grey)", marginTop: 16 }}>
-                Reference: CX-SVC-{base.n} [PLACEHOLDER]
+                Service line {base.n} · A response from a technical lead within two business days
               </p>
             </div>
           </aside>
@@ -138,18 +225,24 @@ export default function ServiceDetail({ slug }) {
 
 function Check() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style={{ flexShrink: 0, marginTop: 4 }}>
-      <path d="M3 10.5 L7.5 15 L17 4.5" stroke="var(--color-safety)" strokeWidth="1.5" />
-    </svg>
+    <span style={{ color: "var(--color-safety)", flexShrink: 0, marginTop: 3 }} aria-hidden="true">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M2 7.5 L5.5 11 L12 3" stroke="currentColor" strokeWidth="1.8" strokeLinecap="square" />
+      </svg>
+    </span>
   );
 }
 
 function NotFoundInline({ label }) {
   return (
-    <div className="wrap section">
-      <h1 className="h1" style={{ color: "#fff" }}>Not found</h1>
-      <p className="body-l mt-4" style={{ color: "var(--color-body-dark)" }}>That {label} page does not exist.</p>
-      <div style={{ marginTop: 32 }}><Button href="#/services">All services</Button></div>
-    </div>
+    <section className="section">
+      <div className="wrap">
+        <h1 className="h1" style={{ color: "#fff" }}>Service not found.</h1>
+        <p className="body-l" style={{ color: "var(--color-body-dark)", marginTop: 16 }}>
+          That {label} does not exist. Browse all services from the services overview.
+        </p>
+        <Button href="#/services">All services</Button>
+      </div>
+    </section>
   );
 }

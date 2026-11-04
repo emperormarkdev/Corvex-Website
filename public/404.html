@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+  SPA fallback for hosts without rewrite rules (e.g. GitHub Pages).
+
+  A deep link like /services/hse-compliance would 404 here, so bounce it into
+  the hash route the router already understands. On load the router normalises
+  the address bar back to the clean path, so the URL stays correct.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      (function () {
+        var path = location.pathname + location.search;
+        // "/" itself is not an error — nothing to do there.
+        if (path !== "/" && path !== "/index.html") {
+          location.replace("/#" + path);
+        } else {
+          location.replace("/");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting… <a href="/">CORVEX</a></p>
+  </body>
+</html>
