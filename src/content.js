@@ -631,10 +631,14 @@ export const presence = {
   title: "Operating across borders.",
   intro: "Head office plus regional delivery hubs close to client operations.",
   locations: [
-    { city: "Lagos", country: "Head Office", x: 48, y: 54, hq: true },
-    { city: "Port Harcourt", country: "Regional Office", x: 50, y: 57 },
-    { city: "Abuja", country: "Regional Office", x: 51, y: 50 },
-    { city: "Accra", country: "West Africa hub", x: 44, y: 56 },
+    { city: "Lagos",         country: "Nigeria — Head Office",         lat:  6.5,  lng:  3.4,  hq: true },
+    { city: "Port Harcourt", country: "Nigeria — Regional Office",      lat:  4.8,  lng:  7.0  },
+    { city: "Abuja",         country: "Nigeria — Regional Office",      lat:  9.1,  lng:  7.4  },
+    { city: "Accra",         country: "Ghana — West Africa Hub",        lat:  5.6,  lng: -0.2  },
+    { city: "London",        country: "United Kingdom — Project Office",lat: 51.5,  lng: -0.1  },
+    { city: "Houston",       country: "United States — Technical Hub",  lat: 29.8,  lng:-95.4  },
+    { city: "Doha",          country: "Qatar — Middle East Office",     lat: 25.3,  lng: 51.5  },
+    { city: "Johannesburg",  country: "South Africa — Southern Hub",    lat:-26.2,  lng: 28.0  },
   ],
 };
 
