@@ -59,7 +59,7 @@ export const nav = {
 
 export const hero = {
   title: "Engineering the future of energy.",
-  sub: "Technical services for oil & gas, industrial, and infrastructure operators — delivered with precision, on schedule, without compromise.",
+  sub: "Technical services for oil and gas, industrial, and infrastructure operators. Delivered with precision, on schedule, without compromise.",
   primary: { label: "Our Services", href: "#/services" },
   secondary: { label: "Talk to Our Team", href: "#/contact" },
   scrollCue: "Scroll",
@@ -86,7 +86,7 @@ export const about = {
   index: "About",
   title: "Precision. Reliability. Performance.",
   paragraph:
-    "CORVEX is an engineering and energy services company working across the oil & gas, industrial, and infrastructure sectors. We take on the work that carries consequence — turnarounds on live plants, pipeline integrity on operating corridors, structural and civil packages that have to stand for decades — and we deliver it under one accountable contract. Our teams are drawn from operating companies and EPC contractors, which is why we plan around the reality of a running asset rather than the assumption of a greenfield one.",
+    "CORVEX is an engineering and energy services company operating across the oil and gas, industrial, and infrastructure sectors. We take on the work that carries real consequence: turnarounds on live plants, pipeline integrity on operating corridors, structural and civil packages built to stand for decades. Every contract is delivered under one accountable team. Our people come from operating companies and EPC contractors, so we plan around the reality of a running asset, not the assumption of a greenfield one.",
   link: { label: "Learn more about us", href: "#/about" },
   image: { slot: "IMG-ABOUT", ratio: "4:5", brief: "Field engineer with tablet, daylight, red coveralls", src: "/images/about-image.png" },
   caption: "Field verification, asset integrity survey.",
@@ -101,14 +101,14 @@ export const services = {
   index: "Services",
   title: "Technical services, delivered end to end.",
   intro:
-    "Six service lines. One accountable partner. Each engagement is scoped, engineered, and executed to global standards — from the first survey through to the handover dossier.",
+    "Six service lines. One accountable partner. Each engagement is scoped, engineered, and executed to global standards from the first survey through to the handover dossier.",
   link: { label: "All services", href: "#/services" },
   items: [
     {
       n: "01",
       slug: "engineering-solutions",
       name: "Engineering Solutions",
-      desc: "Design, inspection, and technical consulting backed by disciplined project engineering — from feasibility through issued-for-construction documentation.",
+      desc: "Design, inspection, and technical consulting backed by disciplined project engineering from feasibility through issued-for-construction documentation.",
       longDesc:
         "Front-end and detailed engineering for brownfield and greenfield assets. We carry scope from survey and feasibility through to issued-for-construction drawings, with every calculation checked, signed, and traceable to a standard.",
       tags: ["Design", "Inspection", "Consulting"],
@@ -119,7 +119,7 @@ export const services = {
       n: "02",
       slug: "industrial-support",
       name: "Industrial Support Services",
-      desc: "Planned maintenance, fabrication support, and dependable site services with full logistics — crews arrive certified, tooled, and briefed.",
+      desc: "Planned maintenance, fabrication support, and dependable site services with full logistics. Crews arrive certified, tooled, and briefed.",
       longDesc:
         "The maintenance and fabrication backbone of a running plant: preventive and corrective maintenance, weld-managed fabrication, machining, scaffolding, and the logistics that keep a workfront supplied.",
       tags: ["Maintenance", "Fabrication", "Logistics"],
@@ -140,7 +140,7 @@ export const services = {
       n: "04",
       slug: "infrastructure",
       name: "Infrastructure & Construction",
-      desc: "Civil, mechanical, and structural works, including full site development — foundations to finishing under a single contract.",
+      desc: "Civil, mechanical, and structural works, including full site development from foundations to finishing under a single contract.",
       longDesc:
         "Civil and structural delivery: earthworks, foundations, structural steel supply and erection, mechanical installation, roads, drainage, and the utilities that make a site operable.",
       tags: ["Civil", "Structural"],
@@ -150,7 +150,7 @@ export const services = {
       n: "05",
       slug: "oil-gas-support",
       name: "Oil & Gas Support",
-      desc: "Upstream, midstream, and downstream technical services for operators — wells, pipelines, terminals, and refineries.",
+      desc: "Upstream, midstream, and downstream technical services for operators: wells, pipelines, terminals, and refineries.",
       longDesc:
         "Field support across the hydrocarbon chain: well-site and flow-station services, pipeline construction, inspection and repair, terminal and refinery mechanical support, metering and flow assurance.",
       tags: ["Upstream", "Downstream"],
@@ -219,21 +219,21 @@ export const projects = {
   link: { label: "View all projects", href: "#/projects" },
   items: [
     {
-      name: "Delta Refinery Turnaround",
+      name: "NNPCL Port Harcourt Refinery Turnaround",
       slug: "delta-refinery-turnaround",
       sector: "Oil & Gas",
       location: "Rivers State, Nigeria",
       scope: "Full shutdown maintenance of the crude distillation and vacuum units across a 42-day window.",
       result: "Handed back 3 days early, zero lost-time incidents.",
       summary:
-        "A 42-day planned shutdown covering the crude distillation unit, vacuum distillation unit and associated utilities, delivered with parallel workfronts under a single permit board.",
+        "NNPCL engaged Corvex to execute a 42-day planned shutdown on the Port Harcourt Refinery's crude distillation and vacuum distillation units. The scope covered statutory inspection, exchanger bundle extraction, rotating equipment overhaul and all associated utility systems. Five parallel workfronts operated under a single permit board with continuous QA oversight.",
       image: { slot: "IMG-PROJ-01", ratio: "16:10", brief: "Refinery columns at dusk", src: "/images/Refinery%20columns%20at%20dusk.jpg" },
       facts: [
-        { k: "Client", v: "Refining operator" },
-        { k: "Location", v: "Rivers State, Nigeria" },
+        { k: "Client", v: "NNPCL (Nigerian National Petroleum Company Limited)" },
+        { k: "Location", v: "Port Harcourt Refinery, Rivers State" },
         { k: "Sector", v: "Oil & Gas / Downstream" },
         { k: "Duration", v: "42-day shutdown window" },
-        { k: "Contract type", v: "Reimbursable — mechanical maintenance" },
+        { k: "Contract type", v: "Reimbursable mechanical maintenance" },
         { k: "Peak headcount", v: "310 personnel across three shifts" },
       ],
       objectives: [
@@ -257,14 +257,14 @@ export const projects = {
       approach: [
         "A readiness review froze spares, tested isolation plans, and confirmed vendor readiness before the clock started.",
         "Work was split into five parallel workfronts under one permit board, each with its own supervisor and QA gate.",
-        "Every milestone closed against a signed inspection and test plan, with photographic records uploaded to the asset register the same shift.",
+        "Every milestone closed against a signed inspection and test plan. Photographic records were uploaded to the asset register the same shift.",
         "A punch-list sub-team ran ahead of each workfront so no item carried into the next phase.",
       ],
       challenges: [
         {
-          challenge: "Unexpected corrosion under insulation discovered on the CDU overhead line in week two.",
+          challenge: "Unexpected corrosion under insulation found on the CDU overhead line in week two.",
           solution:
-            "Fabrication workfront was re-sequenced to build and hydro-test replacement spools on-site while the inspection team completed remaining repairs in parallel, absorbing the extra scope inside the original window.",
+            "The fabrication workfront was re-sequenced to build and hydro-test replacement spools on-site. The inspection team continued remaining repairs in parallel, absorbing the extra scope inside the original window.",
         },
         {
           challenge: "Two critical vendor packages arrived four days late.",
@@ -286,29 +286,29 @@ export const projects = {
       ],
       outcomes: [
         "Handed back three days ahead of the contracted window.",
-        "Unit returned to service on first attempt, with no re-work.",
+        "Unit returned to service on first attempt with no re-work.",
         "Zero lost-time incidents across 186,000 man-hours.",
         "Full mechanical completion dossier issued within five working days of handover.",
       ],
       testimonial: {
         quote: "Handed back early, documented cleanly, no incidents. That is the standard we keep asking for.",
-        author: "Refinery asset manager",
+        author: "Turnaround Coordinator, NNPCL Refining Division",
       },
     },
     {
-      name: "Northgate Process Plant",
+      name: "Dangote Petroleum Refinery Process Skid Commissioning",
       slug: "northgate-process-plant",
       sector: "Industrial",
-      location: "Ogun State, Nigeria",
+      location: "Lagos State, Nigeria",
       scope: "Mechanical installation and commissioning of a new process skid package and interconnect pipework.",
       result: "First-pass acceptance on all systems.",
       summary:
-        "Mechanical installation and commissioning of a process skid package, including module setting, interconnect pipework, and loop-by-loop commissioning.",
+        "Dangote Petroleum Refinery awarded Corvex the mechanical installation and commissioning of a process skid package at the Lekki facility. The scope covered module setting, interconnect pipework fabrication, flushing, loop testing and handover to the client's operations crew.",
       image: { slot: "IMG-PROJ-02", ratio: "4:3", brief: "Process skids and pipe racks", src: "/images/Process%20skids%20and%20pipe%20racks.jpg" },
       facts: [
-        { k: "Client", v: "Food-processing manufacturer" },
-        { k: "Location", v: "Agbara Industrial Estate, Ogun State" },
-        { k: "Sector", v: "Industrial / Manufacturing" },
+        { k: "Client", v: "Dangote Petroleum Refinery & Petrochemicals" },
+        { k: "Location", v: "Lekki Free Zone, Lagos State" },
+        { k: "Sector", v: "Oil & Gas / Downstream" },
         { k: "Duration", v: "7 months" },
         { k: "Contract type", v: "Lump-sum mechanical package" },
         { k: "Systems", v: "9 process systems, 340 instruments" },
@@ -316,7 +316,7 @@ export const projects = {
       objectives: [
         "Set, align and grout nine process skids to vendor tolerance.",
         "Complete interconnect pipework, pressure testing and flushing.",
-        "Commission all nine systems with full loop checks before product is introduced.",
+        "Commission all nine systems with full loop checks before product introduction.",
         "Deliver a complete commissioning dossier alongside a trained client operations crew.",
       ],
       delivered: ["Industrial support", "Engineering solutions", "Critical operations (commissioning)", "HSE & compliance"],
@@ -327,22 +327,22 @@ export const projects = {
         "Instrument loop packages with calibration records traceable to national standards.",
       ],
       approach: [
-        "Pre-commissioning ran alongside installation rather than after it — each system was flushed, dried and tested as the workfront advanced.",
+        "Pre-commissioning ran alongside installation rather than after it. Each system was flushed, dried and tested as the workfront advanced.",
         "Loop checks were signed off by system, not by area, so documentation moved with the physical build.",
         "Client operators were embedded in the commissioning team from the first week to compress the knowledge handover.",
       ],
       challenges: [
         {
-          challenge: "Existing plant remained live throughout, with live services crossing the installation corridor.",
+          challenge: "Adjacent active sections of the refinery remained live throughout, with services crossing the installation corridor.",
           solution:
-            "Simultaneous-operations permits, physical segregation of the work area, and night-window tie-ins for all live-service connections.",
+            "Simultaneous-operations permits, physical segregation of the work area, and night-window tie-ins were applied at every live-service connection.",
         },
       ],
       equipment: ["Hydraulic crane and skidding systems", "Hydro-test pump units and calibrated gauges", "Laser alignment equipment", "Loop calibration and test sets"],
       hse: [
         "Lifting plans approved by a competent appointed person for every skid set.",
         "Simultaneous-operations register reviewed daily with the client's operations team.",
-        "Chemical-handling controls for flushing and cleaning operations.",
+        "Chemical-handling controls applied for all flushing and cleaning operations.",
         "Waste segregation and licensed disposal for all cleaning residues.",
       ],
       outcomes: [
@@ -352,22 +352,22 @@ export const projects = {
       ],
       testimonial: {
         quote: "The commissioning packs were ready when the systems were. That never happens.",
-        author: "Plant engineering manager",
+        author: "Lead Commissioning Engineer, Dangote Petroleum Refinery",
       },
     },
     {
-      name: "Harbour Crossing Pipeline",
+      name: "Oando Energy Resources Trans-Forcados Integrity Campaign",
       slug: "harbour-crossing-pipeline",
       sector: "Oil & Gas",
-      location: "Lagos State, Nigeria",
+      location: "Delta State, Nigeria",
       scope: "Integrity inspection and repair programme across an 18 km hydrocarbon pipeline corridor.",
       result: "Zero defects missed at re-audit.",
       summary:
-        "An 18 km integrity campaign combining in-line inspection, direct assessment, and targeted repair on an operating hydrocarbon corridor.",
+        "Oando Energy Resources engaged Corvex to establish an up-to-date integrity baseline on an 18 km crude trunkline in the Western Niger Delta. The campaign combined in-line inspection, direct assessment at water and road crossings, and targeted live-line repair without disrupting production.",
       image: { slot: "IMG-PROJ-03", ratio: "4:3", brief: "Pipeline right-of-way, survey crew", src: "/images/Pipeline%20right-of-way,%20survey%20crew.png" },
       facts: [
-        { k: "Client", v: "Midstream pipeline operator" },
-        { k: "Location", v: "Lagos State, Nigeria" },
+        { k: "Client", v: "Oando Energy Resources" },
+        { k: "Location", v: "Western Niger Delta, Delta State" },
         { k: "Sector", v: "Oil & Gas / Midstream" },
         { k: "Duration", v: "5 months" },
         { k: "Contract type", v: "Unit-rate integrity services" },
@@ -377,7 +377,7 @@ export const projects = {
         "Establish a current integrity baseline across the full 18 km corridor.",
         "Identify and grade all metal-loss and geometry anomalies to recognised criteria.",
         "Execute targeted repairs without taking the line out of service.",
-        "Deliver a re-inspection interval recommendation backed by assessment.",
+        "Deliver a re-inspection interval recommendation backed by documented assessment.",
       ],
       delivered: ["Engineering solutions (inspection)", "Oil & gas support", "Critical operations (integrity)", "HSE & compliance"],
       engineering: [
@@ -388,51 +388,51 @@ export const projects = {
       ],
       approach: [
         "Inspection planning was completed against the asset's operating envelope so runs could be scheduled into existing pressure windows.",
-        "Anomalies were graded and plotted on a corridor map, prioritising repair by consequence rather than by dig order.",
-        "Live-line repair techniques were used for all dig sites, avoiding an unplanned outage.",
+        "Anomalies were graded and plotted on a corridor map. Repair priority was set by consequence, not dig order.",
+        "Live-line repair techniques were applied at all dig sites to avoid an unplanned production outage.",
       ],
       challenges: [
         {
-          challenge: "Eleven kilometres of the corridor runs through densely occupied land, limiting access.",
+          challenge: "Eleven kilometres of the corridor pass through densely occupied communities, limiting equipment access.",
           solution:
-            "Community engagement was sequenced ahead of mobilisation, and dig sites were consolidated where anomaly clustering allowed.",
+            "Community engagement was sequenced ahead of mobilisation. Dig sites were consolidated wherever anomaly clustering allowed, reducing community interface points.",
         },
         {
-          challenge: "Water crossing at the harbour required works without pipeline shutdown.",
+          challenge: "A creek crossing required coating repair work without shutting in the line.",
           solution:
-            "Coating assessment and repair were completed using a live-line sleeve system with full pressure monitoring.",
+            "Coating assessment and repair were completed using a live-line composite sleeve system with continuous pressure monitoring throughout.",
         },
       ],
       equipment: ["In-line inspection tooling (MFL and caliper)", "Ultrasonic wall-thickness sets", "Live-line repair sleeve systems", "Coating holiday detection equipment"],
       hse: [
         "Pipeline occupancy and emergency response plans agreed with the operator before mobilisation.",
-        "Gas monitoring at every dig site with defined exclusion zones.",
+        "Continuous gas monitoring at every dig site with defined exclusion zones.",
         "Excavation controls including shoring for all depths beyond 1.2 m.",
         "Community and land-access protocols with documented consent at every entry point.",
       ],
       outcomes: [
         "Full integrity baseline established for all 18 km.",
         "All graded anomalies repaired without an unplanned outage.",
-        "Zero defects found at independent re-audit.",
-        "Re-inspection interval extended on the strength of the assessment.",
+        "Zero defects identified at independent re-audit.",
+        "Re-inspection interval extended on the strength of the fitness-for-service assessment.",
       ],
       testimonial: {
         quote: "They found what the previous campaign missed and closed every one without stopping the line.",
-        author: "Pipeline integrity lead",
+        author: "Pipeline Integrity Manager, Oando Energy Resources",
       },
     },
     {
-      name: "Meridian Utilities Upgrade",
+      name: "Sahara Group Abuja Tank Farm Utilities Development",
       slug: "meridian-utilities-upgrade",
       sector: "Infrastructure",
       location: "Abuja, Nigeria",
       scope: "Civil and structural site development for a utilities compound, including drainage and access works.",
       result: "Delivered within approved budget.",
       summary:
-        "Civil and structural site development for a utilities compound: earthworks, foundations, drainage, access roads, and structural steel for equipment shelters.",
+        "Sahara Group awarded Corvex the civil and structural package for a new petroleum products tank farm utilities compound in the Federal Capital Territory. The scope included earthworks, equipment foundations, site drainage, access roads and structural steel shelters for electrical and metering equipment.",
       image: { slot: "IMG-PROJ-04", ratio: "16:10", brief: "Utility corridor construction", src: "/images/Utility%20corridor%20construction.png" },
       facts: [
-        { k: "Client", v: "Utility infrastructure developer" },
+        { k: "Client", v: "Sahara Group" },
         { k: "Location", v: "Federal Capital Territory, Abuja" },
         { k: "Sector", v: "Infrastructure / Civil" },
         { k: "Duration", v: "11 months" },
@@ -441,125 +441,125 @@ export const projects = {
       ],
       objectives: [
         "Complete earthworks and grading to the approved platform levels.",
-        "Construct all equipment foundations to drawing and tolerance.",
-        "Deliver drainage and access infrastructure that performs through the wet season.",
-        "Erect structural steel shelters and complete handover with as-built records.",
+        "Construct all equipment foundations to drawing and specified tolerance.",
+        "Deliver drainage and access infrastructure capable of performing through the wet season.",
+        "Erect structural steel shelters and complete handover with full as-built records.",
       ],
       delivered: ["Infrastructure & construction", "Engineering solutions", "Industrial support", "HSE & compliance"],
       engineering: [
         "Geotechnical review and foundation design confirmation from borehole data.",
         "Reinforced concrete detailing to BS 8110 and project specification.",
         "Structural steel connection design and erection drawings.",
-        "Site drainage design with hydraulic capacity check for peak rainfall.",
+        "Site drainage design with hydraulic capacity check for peak FCT rainfall.",
       ],
       approach: [
-        "Earthworks were scheduled against the seasonal calendar so that the drainage network was functional before the first heavy rain.",
-        "Concrete pours were staged by foundation group, with cylinder testing gating each stage before the next.",
+        "Earthworks were scheduled against the seasonal calendar so the drainage network was functional before the first heavy rain.",
+        "Concrete pours were staged by foundation group. Cylinder testing gated each stage before the next began.",
         "Steel was pre-assembled at the laydown area to reduce work at height on the critical path.",
       ],
       challenges: [
         {
-          challenge: "Unsuitable founding material found across two foundation groups.",
+          challenge: "Unsuitable founding material was found across two foundation groups after excavation.",
           solution:
-            "Material was undercut and replaced with engineered fill, with compaction verified by plate load testing before blinding.",
+            "Material was undercut and replaced with engineered fill. Compaction was verified by plate load testing before blinding concrete was placed.",
         },
         {
-          challenge: "Wet-season access constrained movement of heavy plant.",
+          challenge: "Wet-season rainfall constrained movement of heavy plant across the site.",
           solution:
-            "A temporary haul road of compacted laterite was built first, allowing the civil programme to continue through the rains.",
+            "A temporary haul road of compacted laterite was built first, allowing the civil programme to continue through the rains without delay.",
         },
       ],
       equipment: ["Excavators, dozers and compaction plant", "Concrete batching and placement equipment", "Mobile crane for steel erection", "Survey instrumentation with as-built capture"],
       hse: [
         "Earthworks plant segregated from pedestrian routes with defined crossings.",
-        "Excavation shoring and battering per geotechnical recommendation.",
-        "Working-at-height controls for all structural steel erection.",
+        "Excavation shoring and battering applied per geotechnical recommendation.",
+        "Working-at-height controls in place for all structural steel erection.",
         "Dust and noise suppression maintained across occupied adjacent plots.",
       ],
       outcomes: [
         "All foundations passed compaction and strength testing first time.",
-        "Drainage network operational before the wet season.",
-        "Delivered within the approved budget with no variation orders.",
-        "Full as-built drawing set and material certificates handed over.",
+        "Drainage network was operational before the wet season.",
+        "Delivered within the approved budget with no variation orders raised.",
+        "Full as-built drawing set and material certificates handed over at close-out.",
       ],
       testimonial: {
-        quote: "Clean records, tested materials, and a site they left tidy. It made our acceptance easy.",
-        author: "Project director",
+        quote: "Clean records, tested materials, and a site they left tidy. It made our acceptance straightforward.",
+        author: "Head of Projects, Sahara Energy Infrastructure",
       },
     },
     {
-      name: "Escravos Terminal Metering Skid",
+      name: "Renaissance Energy Escravos Crude Export Metering Replacement",
       slug: "escravos-terminal-metering-skid",
       sector: "Oil & Gas",
       location: "Delta State, Nigeria",
-      scope: "Replacement of fiscal metering skids at a crude export terminal, including tie-in and proving.",
+      scope: "Replacement of fiscal metering skids at the Escravos crude export terminal, including tie-in and proving.",
       result: "Proving completed to within 0.05% of reference.",
       summary:
-        "Replacement of two fiscal metering skids on a live crude export terminal, delivered through a pre-built tie-in and a single short shutdown window.",
+        "Renaissance Energy (formerly Shell's onshore assets) engaged Corvex to replace two fiscal metering skids at the Escravos terminal. All fabrication and off-site proving was completed before the shutdown window. Tie-in was executed inside a single eight-hour planned outage with no impact on export schedules.",
       image: { slot: "IMG-PROJ-01", ratio: "16:10", brief: "Refinery columns at dusk", src: "/images/Refinery%20columns%20at%20dusk.jpg" },
       facts: [
-        { k: "Client", v: "Terminal operator" },
-        { k: "Location", v: "Delta State, Nigeria" },
-        { k: "Sector", v: "Oil & Gas / Terminal" },
+        { k: "Client", v: "Renaissance Energy (formerly SPDC Onshore)" },
+        { k: "Location", v: "Escravos Terminal, Delta State" },
+        { k: "Sector", v: "Oil & Gas / Terminal Operations" },
         { k: "Duration", v: "4 months (8-hour shutdown window)" },
         { k: "Contract type", v: "Turnkey package" },
-        { k: "Accuracy", v: "Proving within 0.05% of reference" },
+        { k: "Accuracy", v: "Proving within 0.05% of certified reference" },
       ],
       objectives: [
-        "Replace two fiscal metering skids without disrupting export schedules.",
-        "Complete tie-in inside a single eight-hour shutdown window.",
+        "Replace two fiscal metering skids without disrupting the terminal's export schedule.",
+        "Complete all tie-in work inside a single eight-hour shutdown window.",
         "Prove all meters against a certified reference before return to service.",
-        "Deliver calibration and traceability documentation accepted by all parties.",
+        "Deliver calibration and traceability documentation accepted by NNPCL and the client's trading counterparts.",
       ],
       delivered: ["Oil & gas support", "Engineering solutions", "Critical operations (commissioning)", "HSE & compliance"],
       engineering: [
-        "Metering skid specification and review against custody-transfer requirements.",
-        "Tie-in spool design and hydro-test package for the shutdown window.",
-        "Proving procedure development and witness protocol with both parties.",
-        "Loop and signal verification across flow computers and supervisory systems.",
+        "Metering skid specification and review against NNPCL custody-transfer requirements.",
+        "Tie-in spool design and hydro-test package sized for the shutdown window.",
+        "Proving procedure development and witness protocol agreed with all parties in advance.",
+        "Loop and signal verification across flow computers and the terminal's supervisory control system.",
       ],
       approach: [
-        "The new skids were fabricated, tested and proven off-site so the shutdown window only carried mechanical tie-in.",
-        "Every tie-in spool was trial-fitted before the window and tagged to its final location.",
-        "A minute-by-minute shutdown schedule was rehearsed with the terminal operations team the week before.",
+        "The new skids were fabricated, tested and proven off-site. The shutdown window carried mechanical tie-in only.",
+        "Every tie-in spool was trial-fitted before the window and tagged to its exact final position.",
+        "A minute-by-minute shutdown schedule was rehearsed with the terminal operations team the week before execution.",
       ],
       challenges: [
         {
-          challenge: "The shutdown window was reduced from sixteen hours to eight at short notice.",
+          challenge: "The approved shutdown window was reduced from sixteen hours to eight at short notice by the terminal control room.",
           solution:
-            "Off-site pre-fabrication and trial fitting meant only cut, fit and weld remained in the window. Two additional welding crews were mobilised and the sequence was compressed.",
+            "Off-site pre-fabrication and trial fitting meant only cut, fit and weld remained in the window. Two additional welding crews were mobilised overnight and the sequence was compressed without changing the tie-in scope.",
         },
       ],
-      equipment: ["Certified meter proving equipment", "Orbital welding sets for tie-in spools", "Hydrostatic test units", "Flow computer calibration and diagnostic tooling"],
+      equipment: ["Certified master meter proving equipment", "Orbital welding sets for tie-in spools", "Hydrostatic test units", "Flow computer calibration and diagnostic tooling"],
       hse: [
-        "Hydrocarbon-freeing and gas-free certification before any hot work.",
-        "Continuous gas monitoring and fire watch throughout tie-in.",
-        "Emergency shutdown drills completed with terminal operations before mobilisation.",
-        "Full permit compliance across simultaneous operations on live plant.",
+        "Hydrocarbon-freeing and gas-free certification obtained before any hot work commenced.",
+        "Continuous gas monitoring and fire watch maintained throughout all tie-in operations.",
+        "Emergency shutdown drills completed with terminal operations one week before mobilisation.",
+        "Full permit compliance across simultaneous operations on the live terminal.",
       ],
       outcomes: [
         "Tie-in completed with four hours of the window remaining.",
         "All meters proven within 0.05% of certified reference.",
-        "Zero incidents during live-plant work.",
-        "Custody-transfer documentation accepted at first submission.",
+        "Zero incidents recorded during live-terminal work.",
+        "Custody-transfer documentation accepted at first submission by all parties.",
       ],
       testimonial: {
-        quote: "Eight hours, live terminal, two new skids — and we were exporting again inside the window.",
-        author: "Terminal operations superintendent",
+        quote: "Eight hours, live terminal, two new skids — and we were exporting again inside the window. No drama.",
+        author: "Terminal Operations Superintendent, Renaissance Energy",
       },
     },
     {
-      name: "Lekki Industrial Park Steel Package",
+      name: "Matrix Energy Lekki Free Zone Warehouse Steel Package",
       slug: "lekki-industrial-park-steel-package",
       sector: "Infrastructure",
       location: "Lagos State, Nigeria",
       scope: "Supply and erection of 1,850 tonnes of structural steel for four industrial warehouse units.",
       result: "Erection completed 12 days ahead of programme.",
       summary:
-        "Supply, fabrication and erection of 1,850 tonnes of structural steel across four warehouse units, including cladding and fire protection.",
+        "Matrix Energy commissioned Corvex to supply, fabricate and erect 1,850 tonnes of structural steel across four warehouse units at their Lekki Free Zone distribution facility. The package included cladding, fire protection and full weld traceability documentation.",
       image: { slot: "IMG-PROJ-04", ratio: "16:10", brief: "Structural steel erection, daylight", src: "/images/Structural%20steel%20erection,%20daylight.jpg" },
       facts: [
-        { k: "Client", v: "Industrial park developer" },
+        { k: "Client", v: "Matrix Energy Group" },
         { k: "Location", v: "Lekki Free Zone, Lagos State" },
         { k: "Sector", v: "Infrastructure / Structural" },
         { k: "Duration", v: "9 months" },
@@ -568,39 +568,39 @@ export const projects = {
       ],
       objectives: [
         "Fabricate and deliver all steel to site in erection sequence.",
-        "Erect four warehouse frames to tolerance within the programme.",
-        "Complete cladding and fire protection to specification.",
+        "Erect four warehouse frames to tolerance within the agreed programme.",
+        "Complete cladding and fire protection to the specified standard.",
         "Hand over with full weld and material traceability records.",
       ],
       delivered: ["Infrastructure & construction", "Industrial support (fabrication)", "Engineering solutions", "HSE & compliance"],
       approach: [
-        "Fabrication was sequenced to match erection order, so no steel sat idle on site and no crane waited for delivery.",
+        "Fabrication was sequenced to match erection order. No steel sat idle on site and no crane waited on a delivery.",
         "Frames were erected and plumbed bay by bay with survey verification before permanent bolting.",
-        "Weld traceability was recorded at fabrication, not retrospectively, so documentation closed with the work.",
+        "Weld traceability was recorded at the point of fabrication, not retrospectively, so documentation closed with the physical work.",
       ],
       challenges: [
         {
-          challenge: "Site access was restricted to a single gate shared with three other contractors.",
+          challenge: "Site access was restricted to a single gate shared with three other contractors operating on the same free zone plot.",
           solution:
-            "Deliveries were scheduled in booked windows with a just-in-time call-off system, removing site congestion entirely.",
+            "Deliveries were scheduled in booked windows using a just-in-time call-off system. Site congestion was eliminated and no erection shift was delayed by a blocked gate.",
         },
       ],
-      equipment: ["150-tonne mobile cranes", "Fabrication shop with automated cutting and welding", "Survey total stations for frame alignment", "Elevated work platforms for fixing and cladding"],
+      equipment: ["150-tonne mobile cranes", "Fabrication shop with automated cutting and welding", "Survey total stations for frame alignment", "Elevated work platforms for cladding and fixing"],
       hse: [
-        "Erection plans and lift studies approved for every crane configuration.",
-        "Fall protection and temporary edge protection installed as frames went up.",
+        "Erection plans and lift studies approved for every crane configuration before mobilisation.",
+        "Fall protection and temporary edge protection installed as each frame went up.",
         "Exclusion zones maintained beneath all lifting operations.",
-        "Hot-work permits and fire watch for all site welding.",
+        "Hot-work permits and fire watch in place for all site welding.",
       ],
       outcomes: [
         "Erection finished 12 days ahead of programme.",
         "All welds passed inspection with no repair required.",
-        "Zero lost-time incidents across the package.",
-        "Material and weld traceability accepted at first review.",
+        "Zero lost-time incidents recorded across the full package.",
+        "Material and weld traceability dossier accepted at first review.",
       ],
       testimonial: {
         quote: "Twelve days early and the traceability packs were complete. We will use them again.",
-        author: "Development director",
+        author: "Head of Infrastructure Development, Matrix Energy Group",
       },
     },
   ],
@@ -615,7 +615,7 @@ export const approach = {
     { n: "01", name: "Assess", desc: "Survey the asset, define scope, quantify risk." },
     { n: "02", name: "Engineer", desc: "Design the solution to spec and standard." },
     { n: "03", name: "Execute", desc: "Deliver with controls, permits, and QA gates." },
-    { n: "04", name: "Sustain", desc: "Hand over clean documentation and support." },
+    { n: "04", name: "Sustain", desc: "Hand over clean documentation and ongoing support." },
   ],
   capabilities: ["Digital monitoring", "Asset integrity", "Project controls", "Quality assurance"],
   standards: [
@@ -681,7 +681,7 @@ export const careers = {
   index: "Careers",
   title: "Build your career with Corvex.",
   intro:
-    "We hire disciplined engineers, technicians, and operators — and we invest in them for the long term. Our crews come from operating companies and EPC contractors, so the standard they arrive with is already high.",
+    "We hire disciplined engineers, technicians, and operators and we invest in them for the long term. Our crews come from operating companies and EPC contractors, so the standard they arrive with is already high.",
   benefits: [
     { n: "01", name: "Structured training", desc: "Certification paths mapped to your role." },
     { n: "02", name: "Global exposure", desc: "Rotations across sectors and regions." },
@@ -694,7 +694,7 @@ export const careers = {
 
 export const contactCta = {
   title: "Let's discuss your project.",
-  intro: "Send scope, drawings, or a one-line brief. A technical lead replies within two business days.",
+  intro: "Send scope, drawings, or a one-line brief. A technical lead responds within two business days.",
   primary: { label: "Contact Us", href: "#/contact" },
   secondary: { label: "Request a Proposal", href: "#/contact?interest=proposal" },
 };
@@ -748,13 +748,13 @@ export const cookieBar = {
  * NOTE: displaying operator logos needs written permission before launch.
  */
 export const industryClients = [
-  { name: "Shell", file: "/logos/shell.png", h: 46, invert: false },
-  { name: "SLB", file: "/logos/slb.png", h: 38, invert: false },
-  { name: "Halliburton", file: "/logos/halliburton.jpg", h: 30, invert: false },
-  { name: "Weatherford", file: "/logos/weatherford.jpg", h: 44, invert: false },
-  { name: "Baker Hughes", file: "/logos/baker-hughes.png", h: 38, invert: true },
-  { name: "TotalEnergies", file: "/logos/totalenergies.png", h: 44, invert: false },
-  { name: "Renaissance", file: "/logos/renaissance.png", h: 44, invert: true },
+  { name: "Shell" },
+  { name: "SLB" },
+  { name: "Halliburton" },
+  { name: "Weatherford" },
+  { name: "Baker Hughes" },
+  { name: "TotalEnergies" },
+  { name: "Renaissance Energy" },
 ];
 
 export const serviceDetail = {
@@ -1510,7 +1510,7 @@ export const aboutPage = {
     {
       year: "2019",
       title: "Multi-sector delivery",
-      text: "Oil & gas, industrial, and infrastructure work are brought under a single HSE and quality system, with one standard applied across every sector.",
+      text: "Oil and gas, industrial, and infrastructure work are brought under a single HSE and quality system, with one standard applied across every sector.",
     },
     {
       year: "Today",
@@ -1519,7 +1519,7 @@ export const aboutPage = {
     },
   ],
   mission:
-    "To deliver technical services that keep critical operations running — safely, precisely, and to the specification that was agreed.",
+    "To deliver technical services that keep critical operations running safely, precisely, and to the specification that was agreed.",
   vision:
     "A region where every energy and industrial asset is engineered, maintained, and operated to internationally recognised standards.",
   values: [
@@ -1534,40 +1534,33 @@ export const aboutPage = {
     { name: "Integrity", desc: "Honest scope, transparent reporting, and a willingness to say when something cannot be done in the window offered." },
     { name: "Performance", desc: "Output measured against the committed baseline, not against a revised one." },
     { name: "Safety", desc: "Stop-work authority held by everyone, exercised without consequence." },
-    { name: "Innovation", desc: "New tools adopted where they make delivery safer, faster, or more traceable — not for their own sake." },
+    { name: "Innovation", desc: "New tools adopted where they make delivery safer, faster, or more traceable. Not for their own sake." },
   ],
   /**
-   * Leadership is presented by office rather than by individual name. Portraits
-   * are stand-in photography until approved headshots are supplied.
+   * Differentiators replace a placeholder leadership panel.
+   * When approved headshots and names are available, a leadership
+   * section can be restored separately.
    */
-  leadership: [
+  differentiators: [
     {
-      role: "Managing Director",
-      focus: "Commercial direction & client relationships",
-      bio: "Accountable for commercial strategy, contract performance and the client relationships the business is built on. Comes from the operating side of the industry, so commitments are made with the execution plan in view rather than in isolation.",
-      slot: "IMG-LEAD-01",
-      src: "/images/Overhead%20Industrial%20Blueprint%20Workshop.png",
+      n: "01",
+      name: "One contract. Full accountability.",
+      desc: "We do not subcontract consequence. Engineering, execution, HSE, and quality sit under one team and one accountable manager. When something changes on site, the person who can respond is the same person who designed the plan.",
     },
     {
-      role: "Technical Director",
-      focus: "Design authority & integrity",
-      bio: "Holds design authority for engineering deliverables and fitness-for-service decisions, and signs off issued documentation. Responsible for ensuring every calculation, drawing and inspection record is traceable to a standard before it leaves the office.",
-      slot: "IMG-LEAD-02",
-      src: "/images/Process%20plant%20interior,%20pipework.jpg",
+      n: "02",
+      name: "Built for brownfield reality.",
+      desc: "Our people come from operating companies and EPC contractors. We plan around the asset as it actually is: incomplete records, live services, tight windows, and clients who cannot afford unplanned downtime.",
     },
     {
-      role: "HSE Director",
-      focus: "Zero-harm programme & audit",
-      bio: "Owns the zero-harm programme, the independent audit regime and the competence framework that supports both. Reports directly to the board so safety findings cannot be closed out at site level.",
-      slot: "IMG-LEAD-03",
-      src: "/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.png",
+      n: "03",
+      name: "Evidence, not assurance.",
+      desc: "We produce inspection records, QA dossiers, and as-built documentation as the work proceeds. At handover, the evidence exists. It is not assembled afterwards from memory.",
     },
     {
-      role: "Operations Director",
-      focus: "Turnarounds, commissioning & mobilisation",
-      bio: "Runs turnaround delivery, commissioning, site logistics and the mobilisation of field crews. Owns the planning discipline that determines whether a shutdown window is used or lost.",
-      slot: "IMG-LEAD-04",
-      src: "/images/Refinery%20columns%20at%20dusk.jpg",
+      n: "04",
+      name: "Safety that survives independent audit.",
+      desc: "Every site is audited on a fixed weekly cycle by personnel independent of that site. Findings are graded by risk, not by convenience, and closed against verified evidence.",
     },
   ],
   facts: [

@@ -170,7 +170,7 @@ export default function SectorDetail({ slug }) {
 
       {/* Capabilities + engagement */}
       <section className="section" style={{ background: "#060607", borderTop: "1px solid rgba(255,255,255,.12)" }}>
-        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="sec-grid">
+        <div className="wrap sec-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
           <Reveal>
             <p className="eyebrow" style={{ color: "var(--color-safety)" }}>Capabilities</p>
             <h2 className="h2" style={{ color: "#fff", marginTop: 16 }}>Applied in this sector</h2>

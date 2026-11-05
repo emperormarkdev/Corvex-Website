@@ -1,6 +1,5 @@
 import { about, aboutPage, presence } from "../content";
 import Reveal from "../components/Reveal";
-import ImageSlot from "../components/ImageSlot";
 import { PageHero, PageCta } from "../components/PageBits";
 import { LogoStack } from "../components/Logo";
 
@@ -20,13 +19,13 @@ export default function AboutPage() {
             <p className="eyebrow" style={{ color: "var(--color-signal)" }}>Who we are</p>
             <p className="body-l mt-6" style={{ color: "var(--color-body-light)" }}>{about.paragraph}</p>
             <p className="body-l mt-6" style={{ color: "var(--color-body-light)" }}>
-              We combine modern technology with deep industry expertise to execute complex projects with excellence, from
-              industrial support services to critical operations and engineering solutions. Our standards are driven by global
-              best practices, ensuring we remain a trusted partner to major energy operators and industrial leaders.
+              We combine field experience with structured engineering to execute complex projects from start to finish.
+              From industrial support to critical operations, our standards are set by the people who have worked inside
+              the facilities we now maintain. That is why major energy operators and industrial clients keep coming back.
             </p>
             <p className="body-l mt-6" style={{ color: "var(--color-body-light)" }}>
-              We are built on the principles of professionalism, integrity, and performance, powering the future with
-              intelligent solutions that drive sustainable growth.
+              Our foundation is professionalism, integrity, and performance. We build lasting relationships by delivering
+              what we say we will deliver, documented and traceable every step of the way.
             </p>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(0,0,0,.12)", background: "var(--color-fog)", minHeight: 280 }}>
@@ -92,26 +91,29 @@ export default function AboutPage() {
         <style>{`@media (max-width: 1023px){ .val-grid{ grid-template-columns: 1fr 1fr !important; } }`}</style>
       </section>
 
-      {/* Leadership */}
+      {/* Why CORVEX — differentiators replacing placeholder leadership */}
       <section className="section" style={{ background: "#060607", borderTop: "1px solid rgba(255,255,255,.12)" }}>
         <div className="wrap">
-          <h2 className="h2" style={{ color: "#fff" }}>Leadership</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, marginTop: 40 }} className="lead-grid">
-            {aboutPage.leadership.map((l) => (
-              <Reveal key={l.slot}>
-                <article className="cx-card chamfer-tr-sm" style={{ overflow: "hidden" }}>
-                  <ImageSlot slot={l.slot} src={l.src} ratio="4:5" brief="Portrait, neutral background" label={false} />
-                  <div style={{ padding: 20 }}>
-                    <p className="h3" style={{ color: "#fff", fontSize: 17 }}>{l.name}</p>
-                    <p className="caption" style={{ color: "var(--color-safety)", marginTop: 4, letterSpacing: ".08em", textTransform: "uppercase" }}>{l.role}</p>
-                    <p className="body" style={{ color: "var(--color-body-dark)", marginTop: 8, fontSize: 14 }}>{l.bio}</p>
-                  </div>
-                </article>
+          <Reveal>
+            <p className="eyebrow" style={{ color: "var(--color-safety)" }}>Why CORVEX</p>
+            <h2 className="h2 mt-4" style={{ color: "#fff" }}>What sets us apart.</h2>
+            <p className="body-l mt-6" style={{ color: "var(--color-body-dark)", maxWidth: 640 }}>
+              We have been on the operating side of the fence. That shapes every decision we make.
+            </p>
+          </Reveal>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32, marginTop: 56 }} className="diff-grid">
+            {aboutPage.differentiators.map((d, i) => (
+              <Reveal key={d.n} delay={i * 0.07}>
+                <div style={{ borderTop: "2px solid var(--color-safety)", paddingTop: 24 }}>
+                  <p style={{ fontFamily: "var(--font-display)", fontSize: 12, color: "var(--color-safety)", letterSpacing: ".1em" }}>{d.n}</p>
+                  <p className="h3 mt-3" style={{ color: "#fff", fontSize: 20 }}>{d.name}</p>
+                  <p className="body mt-4" style={{ color: "var(--color-body-dark)", lineHeight: 1.75 }}>{d.desc}</p>
+                </div>
               </Reveal>
             ))}
           </div>
         </div>
-        <style>{`@media (max-width: 1023px){ .lead-grid{ grid-template-columns: 1fr 1fr !important; } } @media (max-width: 600px){ .lead-grid{ grid-template-columns: 1fr !important; } }`}</style>
+        <style>{`@media (max-width: 700px){ .diff-grid{ grid-template-columns: 1fr !important; gap: 32px !important; } }`}</style>
       </section>
 
       {/* Presence recap */}

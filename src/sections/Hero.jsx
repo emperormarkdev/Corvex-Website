@@ -12,16 +12,22 @@ export default function Hero() {
   const reduce = useReducedMotion();
   return (
     <section id="top" aria-label="Introduction" style={{ position: "relative", minHeight: "100svh", display: "flex", overflow: "hidden", background: "#000" }}>
-      {/* Background (flipped horizontally so refinery mass sits left) */}
+      {/* Background — fills full viewport, no clipping on mobile */}
       <div style={{ position: "absolute", inset: 0, overflow: "hidden" }} aria-hidden="true">
-        <div style={{ position: "absolute", inset: 0, transform: "scaleX(-1)" }}>
-          <img
-            src="/images/hero-refinery.png"
-            alt=""
-            className={reduce ? undefined : "hero-drift"}
-            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", maxWidth: "100%" }}
-          />
-        </div>
+        <img
+          src="/images/hero-refinery.png"
+          alt=""
+          className={reduce ? undefined : "hero-drift"}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center center",
+            transform: "scaleX(-1)",
+          }}
+        />
         {/* Red duotone ~60% */}
         <div style={{ position: "absolute", inset: 0, background: "rgba(201,26,26,.6)", mixBlendMode: "multiply" }} />
         <div style={{ position: "absolute", inset: 0, background: "rgba(120,10,10,.35)" }} />
@@ -29,12 +35,12 @@ export default function Hero() {
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.1) 40%, rgba(0,0,0,.92) 100%)" }} />
       </div>
 
-      {/* Registration crosses */}
+      {/* Registration crosses — desktop only */}
       <span className="reg-cross hidden md:block" style={{ top: 104, left: 32, color: "rgba(255,255,255,.4)" }} />
       <span className="reg-cross hidden md:block" style={{ top: 104, right: 32, color: "rgba(255,255,255,.4)" }} />
 
       {/* Content */}
-      <div className="wrap" style={{ position: "relative", display: "flex", flexDirection: "column", justifyContent: "flex-end", paddingBottom: 120, paddingTop: 160, flex: 1 }}>
+      <div className="wrap" style={{ position: "relative", display: "flex", flexDirection: "column", justifyContent: "flex-end", paddingBottom: "clamp(80px, 12vw, 120px)", paddingTop: "clamp(120px, 16vw, 160px)", flex: 1, minWidth: 0 }}>
         <motion.div
           initial={reduce ? false : { opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -53,15 +59,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Bottom row: scroll cue */}
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginTop: 72 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <span style={{ position: "relative", width: 1, height: 56, background: "rgba(255,255,255,.18)", overflow: "hidden" }}>
-              <span className="scroll-cue-line" style={{ position: "absolute", inset: 0, background: "var(--color-safety)" }} />
-            </span>
-            <span className="eyebrow" style={{ color: "rgba(255,255,255,.6)" }}>{hero.scrollCue}</span>
-          </div>
-        </div>
+
       </div>
 
       {/* Stepped diagonal device, lower edge */}

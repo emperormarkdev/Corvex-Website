@@ -147,7 +147,7 @@ export default function ServiceDetail({ slug }) {
 
       {/* ---- Subservices + delivery method ---- */}
       <section className="section" style={{ background: "#060607", borderTop: "1px solid rgba(255,255,255,.12)" }}>
-        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }} className="rel-grid">
+        <div className="wrap rel-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
           <div>
             <Reveal>
               <p className="eyebrow" style={{ color: "var(--color-safety)" }}>Subservices</p>
@@ -231,7 +231,7 @@ export default function ServiceDetail({ slug }) {
 
       {/* ---- Technical reference ---- */}
       <section className="section" style={{ background: "#060607", borderTop: "1px solid rgba(255,255,255,.12)" }}>
-        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="rel-grid">
+        <div className="wrap rel-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
           <div>
             <Reveal>
               <h2 className="h3" style={{ color: "#fff" }}>Standards applied</h2>
@@ -278,7 +278,7 @@ export default function ServiceDetail({ slug }) {
 
       {/* ---- Quality + outcomes ---- */}
       <section className="section" style={{ background: "#000" }}>
-        <div className="wrap" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }} className="rel-grid">
+        <div className="wrap rel-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64 }}>
           {detail.qa && (
             <Reveal>
               <p className="eyebrow" style={{ color: "var(--color-safety)" }}>Quality assurance</p>
