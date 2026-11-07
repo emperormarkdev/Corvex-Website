@@ -1,0 +1,36 @@
+# CORVEX — Engineering & Energy Solutions
+
+> CORVEX (Corvex Engineering & Energy Services Limited) is a multidisciplinary engineering and energy services company headquartered in Lagos, Nigeria, delivering precision engineering, industrial maintenance, critical operations support, pipeline integrity, and HSE compliance across oil & gas, power, marine, and infrastructure assets.
+
+## Company & Governance
+
+- [Homepage](https://corvex-three.vercel.app/): Overview of CORVEX capabilities, safety metrics, global presence, and project highlights.
+- [About CORVEX](https://corvex-three.vercel.app/#/about): Company profile, leadership philosophy, regional operating footprint, and ISO-aligned delivery standards.
+- [Safety & Compliance (HSE)](https://corvex-three.vercel.app/#/safety): Zero-harm HSE management system, ISO 45001/14001/9001 alignment, stop-work authority, and operational discipline.
+- [Innovation & Technology](https://corvex-three.vercel.app/#/innovation): Digital twin integration, phased-array NDT, drone photogrammetry, and condition-based predictive maintenance.
+- [Careers](https://corvex-three.vercel.app/#/careers): Open engineering, field operations, and HSE roles across Lagos, Port Harcourt, Warri, and international offices.
+- [Contact & RFQs](https://corvex-three.vercel.app/#/contact): Direct contact channels, regional office addresses, and request-for-proposal submission.
+
+## Core Services
+
+- [Services Overview](https://corvex-three.vercel.app/#/services): Full catalog of CORVEX technical service lines and delivery methodology.
+- [Engineering & Technical Solutions](https://corvex-three.vercel.app/#/services/engineering): Front-end engineering design (FEED), detailed multi-discipline brownfield and greenfield engineering, and as-built laser verification.
+- [Industrial & Mechanical Support](https://corvex-three.vercel.app/#/services/industrial-support): Shutdown and turnaround execution, rotating equipment overhaul, structural fabrication, and flange management.
+- [Energy & Critical Operations](https://corvex-three.vercel.app/#/services/energy-operations): Operations and maintenance (O&M) crewing, commissioning and start-up (CSU), and hybrid power integration.
+- [Inspection, Testing & Integrity](https://corvex-three.vercel.app/#/services/inspection): Conventional and advanced non-destructive testing (PAUT, TOFD, PEC), API 510/570/653 inspections, and risk-based inspection (RBI).
+- [Pipeline & Facility Services](https://corvex-three.vercel.app/#/services/pipeline-facility): Pigging campaigns, CP surveys, composite wrap repairs, right-of-way maintenance, and flowstation debottlenecking.
+- [HSE & Regulatory Compliance](https://corvex-three.vercel.app/#/services/hse-compliance): Quantitative risk assessments (HAZOP, HAZID, SIL), environmental baseline studies, and NUPRC/NMDPRA regulatory compliance.
+
+## Sectors Served
+
+- [Oil & Gas](https://corvex-three.vercel.app/#/sectors/oil-gas): Upstream onshore/offshore production facilities, FPSOs, gas processing plants, and midstream pipelines.
+- [Industrial & Manufacturing](https://corvex-three.vercel.app/#/sectors/industrial): Petrochemical complexes, cement plants, heavy manufacturing facilities, and process utilities.
+- [Power & Energy](https://corvex-three.vercel.app/#/sectors/power-energy): Thermal generation assets, captive industrial power plants, substations, and microgrid infrastructure.
+- [Infrastructure & Marine](https://corvex-three.vercel.app/#/sectors/infrastructure): Marine terminals, jetties, tank farms, civil heavy foundations, and transport corridors.
+
+## Selected Projects & Technical Insights
+
+- [Projects Portfolio](https://corvex-three.vercel.app/#/projects): Case studies covering offshore turnaround execution, gas plant debottlenecking, pipeline integrity campaigns, and terminal upgrades.
+- [Technical Insights & Field Notes](https://corvex-three.vercel.app/#/insights): Engineering articles on brownfield turnaround readiness, risk-based inspection programs, and subsea/topside integrity management.
+- [Capability Statement](https://corvex-three.vercel.app/#/downloads/capability-statement): Downloadable corporate capability dossier, pre-qualification summary, and ISO/HSE policy documentation.
+

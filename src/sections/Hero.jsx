@@ -15,8 +15,12 @@ export default function Hero() {
       {/* Background — fills full viewport, no clipping on mobile */}
       <div style={{ position: "absolute", inset: 0, overflow: "hidden" }} aria-hidden="true">
         <img
-          src="/images/hero-refinery.png"
+          src="/images/hero-refinery.webp"
           alt=""
+          width="1600"
+          height="900"
+          fetchPriority="high"
+          decoding="async"
           className={reduce ? undefined : "hero-drift"}
           style={{
             position: "absolute",
@@ -42,9 +46,9 @@ export default function Hero() {
       {/* Content */}
       <div className="wrap" style={{ position: "relative", display: "flex", flexDirection: "column", justifyContent: "flex-end", paddingBottom: "clamp(80px, 12vw, 120px)", paddingTop: "clamp(120px, 16vw, 160px)", flex: 1, minWidth: 0 }}>
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: EASE }}
+          initial={reduce ? false : { y: 16 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.6, ease: EASE }}
           style={{ maxWidth: 900 }}
         >
           <h1 className="display" style={{ color: "#fff" }}>

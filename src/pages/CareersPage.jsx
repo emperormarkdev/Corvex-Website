@@ -36,9 +36,9 @@ export default function CareersPage() {
         <div className="wrap">
           <h2 className="h2" style={{ color: "#fff" }}>Life at Corvex</h2>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 16, marginTop: 32 }} className="val-grid">
-            <ImageSlot slot="IMG-LIFE-01" src="/images/Night%20shift%20operations,%20control%20room%20glow.jpg" ratio="1:1" brief="Crew at shift handover" chamfer />
-            <ImageSlot slot="IMG-LIFE-02" src="/images/Workshop%20floor,%20fabrication%20in%20progress.png" ratio="1:1" brief="Workshop training session" chamfer />
-            <ImageSlot slot="IMG-LIFE-03" src="/images/Structural%20steel%20erection,%20daylight.jpg" ratio="1:1" brief="Site walk, daylight" chamfer />
+            <ImageSlot slot="IMG-LIFE-01" src="/images/Night%20shift%20operations,%20control%20room%20glow.webp" ratio="1:1" brief="Crew at shift handover" chamfer />
+            <ImageSlot slot="IMG-LIFE-02" src="/images/Workshop%20floor,%20fabrication%20in%20progress.webp" ratio="1:1" brief="Workshop training session" chamfer />
+            <ImageSlot slot="IMG-LIFE-03" src="/images/Structural%20steel%20erection,%20daylight.webp" ratio="1:1" brief="Site walk, daylight" chamfer />
           </div>
         </div>
         <style>{`@media (max-width: 900px){ .val-grid{ grid-template-columns: 1fr !important; } }`}</style>
@@ -113,7 +113,7 @@ export default function CareersPage() {
               <Button href="#/careers/apply?role=Graduate%20Programme">Apply to the programme</Button>
             </div>
           </div>
-          <ImageSlot slot="IMG-GRAD-01" src="/images/Overhead%20Industrial%20Blueprint%20Workshop.png" ratio="4:3" brief="Graduate engineer on site with mentor" chamfer />
+          <ImageSlot slot="IMG-GRAD-01" src="/images/Overhead%20Industrial%20Blueprint%20Workshop.webp" ratio="4:3" brief="Graduate engineer on site with mentor" chamfer />
         </div>
         <style>{`@media (max-width: 900px){ .val-grid{ grid-template-columns: 1fr !important; } }`}</style>
       </section>

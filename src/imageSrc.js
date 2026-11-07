@@ -13,37 +13,39 @@ const img = (name) => `/images/${encodeURI(name)}`;
 
 export const imageSrc = {
   // Hero + about
-  "IMG-HERO": img("hero-refinery.png"),
-  "IMG-ABOUT": img("about-image.png"),
+  "IMG-HERO": img("hero-refinery.webp"),
+  "IMG-ABOUT": img("about-image.webp"),
 
   // Services (overview + detail variants)
-  "IMG-SVC-01": img("Overhead Industrial Blueprint Workshop.png"),
-  "IMG-SVC-02": img("Workshop floor, fabrication in progress.png"),
-  "IMG-SVC-03": img("Night shift operations, control room glow.jpg"),
-  "IMG-SVC-04": img("Structural steel erection, daylight.jpg"),
-  "IMG-SVC-05": img("Pipeline corridor, inspection crew.png"),
-  "IMG-SVC-D-01": img("Overhead Industrial Blueprint Workshop.png"),
-  "IMG-SVC-D-02": img("Workshop floor, fabrication in progress.png"),
-  "IMG-SVC-D-03": img("Night shift operations, control room glow.jpg"),
-  "IMG-SVC-D-04": img("Structural steel erection, daylight.jpg"),
-  "IMG-SVC-D-05": img("Pipeline corridor, inspection crew.png"),
+  "IMG-SVC-01": img("Overhead Industrial Blueprint Workshop.webp"),
+  "IMG-SVC-02": img("Workshop floor, fabrication in progress.webp"),
+  "IMG-SVC-03": img("Night shift operations, control room glow.webp"),
+  "IMG-SVC-04": img("Structural steel erection, daylight.webp"),
+  "IMG-SVC-05": img("Pipeline corridor, inspection crew.webp"),
+  "IMG-SVC-06": img("Worker in hard hat and red coveralls, thumbs-up.webp"),
+  "IMG-SVC-D-01": img("Overhead Industrial Blueprint Workshop.webp"),
+  "IMG-SVC-D-02": img("Workshop floor, fabrication in progress.webp"),
+  "IMG-SVC-D-03": img("Night shift operations, control room glow.webp"),
+  "IMG-SVC-D-04": img("Structural steel erection, daylight.webp"),
+  "IMG-SVC-D-05": img("Pipeline corridor, inspection crew.webp"),
+  "IMG-SVC-D-06": img("Worker in hard hat and red coveralls, thumbs-up.webp"),
 
   // Sectors (overview + detail variants)
-  "IMG-SECTOR-OG": img("Offshore platform at dusk.jpg"),
-  "IMG-SECTOR-IND": img("Process plant interior, pipework.jpg"),
-  "IMG-SECTOR-INF": img("Bridge and highway works, daylight.png"),
-  "IMG-SECTOR-P-OG": img("Offshore platform at dusk.jpg"),
-  "IMG-SECTOR-P-IND": img("Process plant interior, pipework.jpg"),
-  "IMG-SECTOR-P-INF": img("Bridge and highway works, daylight.png"),
+  "IMG-SECTOR-OG": img("Offshore platform at dusk.webp"),
+  "IMG-SECTOR-IND": img("Process plant interior, pipework.webp"),
+  "IMG-SECTOR-INF": img("Bridge and highway works, daylight.webp"),
+  "IMG-SECTOR-P-OG": img("Offshore platform at dusk.webp"),
+  "IMG-SECTOR-P-IND": img("Process plant interior, pipework.webp"),
+  "IMG-SECTOR-P-INF": img("Bridge and highway works, daylight.webp"),
 
   // Safety
-  "IMG-SAFETY": img("Worker in hard hat and red coveralls, thumbs-up.png"),
+  "IMG-SAFETY": img("Worker in hard hat and red coveralls, thumbs-up.webp"),
 
   // Projects
-  "IMG-PROJ-01": img("Refinery columns at dusk.jpg"),
-  "IMG-PROJ-02": img("Process skids and pipe racks.jpg"),
-  "IMG-PROJ-03": img("Pipeline right-of-way, survey crew.png"),
-  "IMG-PROJ-04": img("Utility corridor construction.png"),
+  "IMG-PROJ-01": img("Refinery columns at dusk.webp"),
+  "IMG-PROJ-02": img("Process skids and pipe racks.webp"),
+  "IMG-PROJ-03": img("Pipeline right-of-way, survey crew.webp"),
+  "IMG-PROJ-04": img("Utility corridor construction.webp"),
 };
 
 export const getImageSrc = (slot) => (slot ? imageSrc[slot] || "" : "");

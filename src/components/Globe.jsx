@@ -225,7 +225,8 @@ export default function Globe({ locations = [] }) {
           v = rotateX(rotateY(v, s.yaw), s.pitch);
           const p = project(v, cx, cy, R);
           if (p.visible) {
-            first ? ctx.moveTo(p.px, p.py) : ctx.lineTo(p.px, p.py);
+            if (first) ctx.moveTo(p.px, p.py);
+            else ctx.lineTo(p.px, p.py);
             first = false;
           } else {
             first = true;
@@ -243,7 +244,8 @@ export default function Globe({ locations = [] }) {
           v = rotateX(rotateY(v, s.yaw), s.pitch);
           const p = project(v, cx, cy, R);
           if (p.visible) {
-            first ? ctx.moveTo(p.px, p.py) : ctx.lineTo(p.px, p.py);
+            if (first) ctx.moveTo(p.px, p.py);
+            else ctx.lineTo(p.px, p.py);
             first = false;
           } else {
             first = true;
@@ -277,7 +279,8 @@ export default function Globe({ locations = [] }) {
           const p = project(v, cx, cy, R);
           if (p.visible) {
             anyVisible = true;
-            first ? ctx.moveTo(p.px, p.py) : ctx.lineTo(p.px, p.py);
+            if (first) ctx.moveTo(p.px, p.py);
+            else ctx.lineTo(p.px, p.py);
             first = false;
           } else {
             first = true;
@@ -300,7 +303,8 @@ export default function Globe({ locations = [] }) {
           let v = rotateX(rotateY(raw, s.yaw), s.pitch);
           const p = project(v, cx, cy, R);
           if (p.visible) {
-            first ? ctx.moveTo(p.px, p.py) : ctx.lineTo(p.px, p.py);
+            if (first) ctx.moveTo(p.px, p.py);
+            else ctx.lineTo(p.px, p.py);
             first = false;
           } else { first = true; }
         });

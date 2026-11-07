@@ -58,14 +58,17 @@ export default function ServiceDetail({ slug }) {
               <h2 className="h3" style={{ color: "#fff", marginTop: 56 }}>Scope of work</h2>
               <ul style={{ listStyle: "none", margin: "28px 0 0", padding: 0 }}>
                 {detail.scope.map((s, i) => (
-                  <Reveal key={s} delay={Math.min(i * 0.04, 0.2)}>
-                    <li style={{ display: "flex", gap: 16, padding: "16px 0", borderTop: "1px solid rgba(255,255,255,.12)", color: "#fff" }}>
-                      <Check />
-                      <span className="body-l">{s}</span>
-                    </li>
+                  <Reveal
+                    as="li"
+                    key={s}
+                    delay={Math.min(i * 0.04, 0.2)}
+                    style={{ display: "flex", gap: 16, padding: "16px 0", borderTop: "1px solid rgba(255,255,255,.12)", color: "#fff" }}
+                  >
+                    <Check />
+                    <span className="body-l">{s}</span>
                   </Reveal>
                 ))}
-                <li style={{ borderTop: "1px solid rgba(255,255,255,.12)" }} />
+                <li style={{ borderTop: "1px solid rgba(255,255,255,.12)" }} aria-hidden="true" />
               </ul>
             </Reveal>
           </div>
@@ -175,16 +178,19 @@ export default function ServiceDetail({ slug }) {
             </Reveal>
             <ol style={{ listStyle: "none", margin: "32px 0 0", padding: 0, display: "grid", gap: 0 }}>
               {detail.steps.map((s, i) => (
-                <Reveal key={s} delay={Math.min(i * 0.05, 0.2)}>
-                  <li style={{ display: "flex", gap: 18, alignItems: "baseline", padding: "18px 0", borderTop: "1px solid rgba(255,255,255,.12)" }}>
-                    <span style={{ fontFamily: "var(--font-display)", color: "var(--color-safety)", fontSize: 13, minWidth: 22 }}>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="body" style={{ color: "#fff" }}>{s}</span>
-                  </li>
+                <Reveal
+                  as="li"
+                  key={s}
+                  delay={Math.min(i * 0.05, 0.2)}
+                  style={{ display: "flex", gap: 18, alignItems: "baseline", padding: "18px 0", borderTop: "1px solid rgba(255,255,255,.12)" }}
+                >
+                  <span style={{ fontFamily: "var(--font-display)", color: "var(--color-safety)", fontSize: 13, minWidth: 22 }}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="body" style={{ color: "#fff" }}>{s}</span>
                 </Reveal>
               ))}
-              <li style={{ borderTop: "1px solid rgba(255,255,255,.12)" }} />
+              <li style={{ borderTop: "1px solid rgba(255,255,255,.12)" }} aria-hidden="true" />
             </ol>
 
             <Reveal delay={0.1}>

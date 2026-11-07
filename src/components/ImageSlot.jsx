@@ -23,6 +23,8 @@ export default function ImageSlot({
 }) {
   const [w, h] = ratio.split(":").map(Number);
   const resolvedSrc = src || getImageSrc(slot);
+  const imgW = (w || 16) * 60;
+  const imgH = (h || 9) * 60;
   return (
     <div
       className={`img-slot ${chamfer ? "chamfer-tr" : ""} ${className}`}
@@ -31,7 +33,7 @@ export default function ImageSlot({
       role="img"
       aria-label={alt || `${slot} — ${brief}`}
     >
-      {resolvedSrc && <img src={resolvedSrc} alt={alt} loading="lazy" />}
+      {resolvedSrc && <img src={resolvedSrc} alt={alt} width={imgW} height={imgH} loading="lazy" decoding="async" />}
       {video && (
         <span
           aria-hidden="true"

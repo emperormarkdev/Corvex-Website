@@ -10,7 +10,7 @@ export default function AboutPage() {
         index="About"
         title="Precision. Reliability. Performance."
         breadcrumb={[{ label: "About" }]}
-        image={{ slot: "IMG-ABOUT-HERO", ratio: "4:3", brief: "Field engineer with tablet, daylight, red coveralls", src: "/images/about-image.png" }}
+        image={{ slot: "IMG-ABOUT-HERO", ratio: "4:3", brief: "Field engineer with tablet, daylight, red coveralls", src: "/images/about-image.webp" }}
       />
 
       <section className="section" style={{ background: "#fff", color: "#000" }}>

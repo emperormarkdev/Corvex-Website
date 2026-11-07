@@ -2,11 +2,9 @@ import { useEffect } from "react";
 import {
   site,
   services,
-  serviceDetail,
-  sectorsDetail,
+  sectors,
   projects,
   insights,
-  articleBodies,
 } from "./content";
 import { segments } from "./routerCore";
 import { SITE_URL } from "./config/site";
@@ -23,8 +21,6 @@ import { SITE_URL } from "./config/site";
  * Copy rule: describe capability honestly. No "best", "leading" or "largest"
  * claims — those are unsupportable and damage credibility with technical buyers.
  */
-
-const TITLE_SUFFIX = "CORVEX — Engineering & Energy Solutions";
 
 /**
  * Canonical origin for the current deployment.
@@ -72,11 +68,10 @@ export function metaFor(route) {
       );
     }
     const base = services.items.find((s) => s.slug === s2);
-    const detail = serviceDetail[s2];
     if (!base) return null;
     return page(
       `${base.name} — ${SERVICE_KEYWORDS[s2] || "Engineering Services"} | CORVEX`,
-      `${base.name} from CORVEX: ${detail?.overview?.slice(0, 150) || base.desc}`,
+      `${base.name} from CORVEX: ${(base.longDesc || base.desc).slice(0, 150)}`,
       `/services/${s2}`,
       { service: base }
     );
@@ -84,11 +79,11 @@ export function metaFor(route) {
 
   if (s1 === "sectors") {
     const slug = s2 || "oil-gas";
-    const d = sectorsDetail[slug];
+    const d = sectors.items.find((x) => x.slug === slug);
     if (!d) return null;
     return page(
       `${d.name} Engineering & Construction Services | CORVEX Nigeria`,
-      `${d.challenge?.slice(0, 90)}… CORVEX provides ${d.name.toLowerCase()} engineering, maintenance and construction services in Nigeria.`,
+      `${d.desc} CORVEX provides ${d.name.toLowerCase()} engineering, maintenance and construction services in Nigeria.`,
       `/sectors/${slug}`
     );
   }
@@ -160,10 +155,9 @@ export function metaFor(route) {
     }
     const a = insights.items.find((x) => x.slug === s2);
     if (!a) return null;
-    const body = articleBodies[s2];
     return page(
       `${a.title} | CORVEX Insights`,
-      `${(body?.[0] || a.excerpt || "").slice(0, 158)}`,
+      `${(a.excerpt || "").slice(0, 158)}`,
       `/insights/${s2}`,
       { article: a }
     );
@@ -368,7 +362,7 @@ export default function Seo({ route }) {
       document.head.appendChild(script);
     }
     const graph = [organizationSchema(base), breadcrumbSchema(meta, base)];
-    if (meta.service) graph.push(serviceSchema(meta.service, serviceDetail[meta.service.slug], base));
+    if (meta.service) graph.push(serviceSchema(meta.service, null, base));
     if (meta.article) graph.push(articleSchema(meta.article, base));
     if (meta.project) {
       graph.push({

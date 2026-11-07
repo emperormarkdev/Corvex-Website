@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import CookieBar from "./components/CookieBar";
@@ -15,23 +16,26 @@ import Insights from "./sections/Insights";
 import Careers from "./sections/Careers";
 import ContactCta from "./sections/ContactCta";
 
-import ServicesOverview from "./pages/ServicesOverview";
-import ServiceDetail from "./pages/ServiceDetail";
-import SectorDetail from "./pages/SectorDetail";
-import ProjectsOverview from "./pages/ProjectsOverview";
-import ProjectDetail from "./pages/ProjectDetail";
-import AboutPage from "./pages/AboutPage";
-import SafetyPage from "./pages/SafetyPage";
-import InnovationPage from "./pages/InnovationPage";
-import CareersPage from "./pages/CareersPage";
-import InsightsOverview from "./pages/InsightsOverview";
-import ArticlePage from "./pages/ArticlePage";
-import ContactPage from "./pages/ContactPage";
-import ProposalPage, { SafetyConcernPage } from "./pages/ProposalPage";
-import LegalPage from "./pages/LegalPage";
-import ApplyPage from "./pages/ApplyPage";
-import DownloadPage from "./pages/DownloadPage";
-import NotFoundPage from "./pages/NotFoundPage";
+const ServicesOverview = lazy(() => import("./pages/ServicesOverview"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const SectorDetail = lazy(() => import("./pages/SectorDetail"));
+const ProjectsOverview = lazy(() => import("./pages/ProjectsOverview"));
+const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const SafetyPage = lazy(() => import("./pages/SafetyPage"));
+const InnovationPage = lazy(() => import("./pages/InnovationPage"));
+const CareersPage = lazy(() => import("./pages/CareersPage"));
+const InsightsOverview = lazy(() => import("./pages/InsightsOverview"));
+const ArticlePage = lazy(() => import("./pages/ArticlePage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const ProposalPage = lazy(() => import("./pages/ProposalPage"));
+const SafetyConcernPage = lazy(() =>
+  import("./pages/ProposalPage").then((m) => ({ default: m.SafetyConcernPage }))
+);
+const LegalPage = lazy(() => import("./pages/LegalPage"));
+const ApplyPage = lazy(() => import("./pages/ApplyPage"));
+const DownloadPage = lazy(() => import("./pages/DownloadPage"));
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 
 import { useRoute, segments } from "./routerCore";
 
@@ -98,7 +102,9 @@ export default function App() {
       <Seo route={route} />
       <a href="#main" className="skip-link">Skip to content</a>
       <Nav />
-      <main id="main">{resolve(route)}</main>
+      <main id="main">
+        <Suspense fallback={null}>{resolve(route)}</Suspense>
+      </main>
       <Footer />
       <CookieBar />
     </>

@@ -56,7 +56,7 @@ export default function Projects() {
                 }}
               >
                 <div className="img-slot" data-slot={p.image.slot} style={{ aspectRatio: i === 0 ? "16 / 8" : "16 / 10" }} role="img" aria-label={`${p.image.slot} — ${p.image.brief}`}>
-                  {p.image.src && <img src={p.image.src} alt={p.name} loading="lazy" />}
+                  {p.image.src && <img src={p.image.src} alt={p.name} width={i === 0 ? 960 : 800} height={i === 0 ? 480 : 500} loading="lazy" decoding="async" />}
                   {!p.image.src && (
                     <span className="img-slot-label">
                       <strong>{p.image.slot}</strong>

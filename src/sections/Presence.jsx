@@ -68,51 +68,52 @@ export default function Presence() {
           {/* Location list */}
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
             {presence.locations.map((l, i) => (
-              <Reveal key={l.city} delay={i * 0.05}>
-                <li
+              <Reveal
+                as="li"
+                key={l.city}
+                delay={i * 0.05}
+                style={{
+                  display: "flex",
+                  gap: 16,
+                  alignItems: "baseline",
+                  padding: "16px 0",
+                  borderTop: "1px solid rgba(255,255,255,.12)",
+                }}
+              >
+                <span
                   style={{
-                    display: "flex",
-                    gap: 16,
-                    alignItems: "baseline",
-                    padding: "16px 0",
-                    borderTop: "1px solid rgba(255,255,255,.12)",
+                    fontFamily: "var(--font-display)",
+                    fontSize: 11,
+                    color: l.hq ? "var(--color-safety)" : "rgba(255,255,255,.35)",
+                    letterSpacing: ".1em",
+                    flexShrink: 0,
+                    minWidth: 28,
                   }}
                 >
+                  {l.hq ? "HQ" : `0${i}`}
+                </span>
+                <span>
                   <span
                     style={{
-                      fontFamily: "var(--font-display)",
-                      fontSize: 11,
-                      color: l.hq ? "var(--color-safety)" : "rgba(255,255,255,.35)",
-                      letterSpacing: ".1em",
-                      flexShrink: 0,
-                      minWidth: 28,
+                      display: "block",
+                      color: "#fff",
+                      fontWeight: 600,
+                      fontSize: 15,
                     }}
                   >
-                    {l.hq ? "HQ" : `0${i}`}
+                    {l.city}
                   </span>
-                  <span>
-                    <span
-                      style={{
-                        display: "block",
-                        color: "#fff",
-                        fontWeight: 600,
-                        fontSize: 15,
-                      }}
-                    >
-                      {l.city}
-                    </span>
-                    <span
-                      className="caption"
-                      style={{
-                        display: "block",
-                        color: "var(--color-grey)",
-                        marginTop: 2,
-                      }}
-                    >
-                      {l.country}
-                    </span>
+                  <span
+                    className="caption"
+                    style={{
+                      display: "block",
+                      color: "var(--color-grey)",
+                      marginTop: 2,
+                    }}
+                  >
+                    {l.country}
                   </span>
-                </li>
+                </span>
               </Reveal>
             ))}
           </ul>

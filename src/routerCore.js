@@ -57,7 +57,7 @@ export function useRoute() {
       setRoute((prev) => (prev === next ? prev : next));
     };
 
-    const onChange = (e) => {
+    const onChange = () => {
       const h = window.location.hash || "";
       if (h.startsWith("#/") || h === "#/") {
         sync();

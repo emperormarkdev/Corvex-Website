@@ -127,7 +127,7 @@ function ServiceIcon({ slug }) {
 function PreviewSlot({ s }) {
   return (
     <div className="img-slot chamfer-tr" data-slot={s.image.slot} style={{ aspectRatio: "4 / 5", minHeight: 420 }} role="img" aria-label={`${s.image.slot} — ${s.image.brief}`}>
-      {s.image.src && <img src={s.image.src} alt={s.name} loading="lazy" />}
+      {s.image.src && <img src={s.image.src} alt={s.name} width="640" height="800" loading="lazy" decoding="async" />}
       {!s.image.src && (
         <span className="img-slot-label">
           <strong>{s.image.slot}</strong>
@@ -141,7 +141,7 @@ function PreviewSlot({ s }) {
 function InlineSlot({ s }) {
   return (
     <span className="img-slot" data-slot={s.image.slot} style={{ display: "block", aspectRatio: "16 / 9" }} role="img" aria-label={`${s.image.slot} — ${s.image.brief}`}>
-      {s.image.src && <img src={s.image.src} alt={s.name} loading="lazy" />}
+      {s.image.src && <img src={s.image.src} alt={s.name} width="640" height="360" loading="lazy" decoding="async" />}
       {!s.image.src && (
         <span className="img-slot-label">
           <strong>{s.image.slot}</strong>

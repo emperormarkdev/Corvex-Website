@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:corvex-three.vercel.app:content:llms-txt",
+      "displayName": "CORVEX Engineering & Energy Solutions — LLM Context",
+      "description": "Structured markdown overview of CORVEX engineering services, industrial support, asset integrity, HSE compliance, sectors served, and project case studies.",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
+      "url": "https://corvex-three.vercel.app/llms.txt",
+      "capabilities": [
+        "service-discovery",
+        "technical-capabilities",
+        "project-portfolio",
+        "hse-compliance"
+      ],
+      "tags": [
+        "engineering",
+        "energy",
+        "oil-and-gas",
+        "asset-integrity",
+        "industrial-services"
+      ],
+      "representativeQueries": [
+        "What engineering and industrial services does CORVEX provide?",
+        "Which oil, gas, power, and infrastructure sectors does CORVEX serve?",
+        "How does CORVEX manage HSE compliance and asset integrity inspections?",
+        "How can I request a technical proposal or contact CORVEX?"
+      ]
+    }
+  ]
+}
+

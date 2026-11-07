@@ -54,11 +54,16 @@ export default function Approach() {
           </div>
 
           {/* Process diagram */}
-          <ol style={{ listStyle: "none", margin: 0, padding: 0, position: "relative" }}>
+          <div style={{ position: "relative" }}>
             <span aria-hidden="true" style={{ position: "absolute", left: 23, top: 24, bottom: 24, width: 1, background: "rgba(255,255,255,.18)" }} />
-            {approach.steps.map((st, i) => (
-              <Reveal key={st.n} delay={i * 0.08}>
-                <li style={{ display: "flex", gap: 24, padding: "20px 0", position: "relative" }}>
+            <ol style={{ listStyle: "none", margin: 0, padding: 0, position: "relative" }}>
+              {approach.steps.map((st, i) => (
+                <Reveal
+                  as="li"
+                  key={st.n}
+                  delay={i * 0.08}
+                  style={{ display: "flex", gap: 24, padding: "20px 0", position: "relative" }}
+                >
                   <span
                     aria-hidden="true"
                     style={{
@@ -85,10 +90,10 @@ export default function Approach() {
                   <span className="caption hidden md:block" aria-hidden="true" style={{ marginLeft: "auto", color: "rgba(255,255,255,.3)", letterSpacing: ".1em", paddingTop: 8, whiteSpace: "nowrap" }}>
                     CX-PROC / {st.n}
                   </span>
-                </li>
-              </Reveal>
-            ))}
-          </ol>
+                </Reveal>
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
       <style>{`@media (max-width: 900px){ .appr-grid{ grid-template-columns: 1fr !important; gap: 48px !important; } }`}</style>

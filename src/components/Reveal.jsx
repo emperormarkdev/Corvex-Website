@@ -4,16 +4,17 @@ import { motion, useReducedMotion } from "framer-motion";
  * Scroll reveal: fade + 24px rise, 700ms, once, 60ms stagger via `delay`.
  * Disabled entirely under prefers-reduced-motion.
  */
-export default function Reveal({ children, delay = 0, className = "", as = "div" }) {
+export default function Reveal({ children, delay = 0, className = "", style, as = "div" }) {
   const reduce = useReducedMotion();
   if (reduce) {
     const Tag = as;
-    return <Tag className={className}>{children}</Tag>;
+    return <Tag className={className} style={style}>{children}</Tag>;
   }
   const Tag = motion[as] ?? motion.div;
   return (
     <Tag
       className={className}
+      style={style}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}

@@ -24,7 +24,7 @@ export default function Insights() {
               <Reveal key={item.title} delay={0.08 + i * 0.06}>
                 <Link to={`/insights/${item.slug}`} className="cx-card-light chamfer-tr-sm" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", overflow: "hidden", textDecoration: "none", color: "inherit" }}>
                   <div className="img-slot" data-slot={item.image.slot} style={{ aspectRatio: "4 / 3", border: "none" }} role="img" aria-label={`${item.image.slot} — ${item.image.brief}`}>
-                    {item.image.src && <img src={item.image.src} alt={item.title} loading="lazy" />}
+                    {item.image.src && <img src={item.image.src} alt={item.title} width="640" height="480" loading="lazy" decoding="async" />}
                     {!item.image.src && (
                       <span className="img-slot-label">
                         <strong>{item.image.slot}</strong>
@@ -56,7 +56,7 @@ function FeatureCard({ item }) {
   return (
     <Link to={`/insights/${item.slug}`} className="cx-card-light chamfer-tr" style={{ overflow: "hidden", height: "100%", display: "block", textDecoration: "none", color: "inherit" }}>
       <div className="img-slot" data-slot={item.image.slot} style={{ aspectRatio: "16 / 9", border: "none", borderBottom: "1px solid rgba(0,0,0,.12)" }} role="img" aria-label={`${item.image.slot} — ${item.image.brief}`}>
-        {item.image.src && <img src={item.image.src} alt={item.title} loading="lazy" />}
+        {item.image.src && <img src={item.image.src} alt={item.title} width="960" height="540" loading="lazy" decoding="async" />}
         {!item.image.src && (
           <span className="img-slot-label">
             <strong>{item.image.slot}</strong>
