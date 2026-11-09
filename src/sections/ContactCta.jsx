@@ -33,7 +33,8 @@ export default function ContactCta() {
           <Reveal delay={0.22}>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 40px", marginTop: 40 }} className="hairline-t" >
               <p className="body" style={{ paddingTop: 20, color: "#fff" }}>
-                <span style={{ opacity: 0.7 }}>Email — </span>{site.email.value}
+                <span style={{ opacity: 0.7 }}>Email — </span>
+                <a href={site.email.href} style={{ color: "#fff", textDecoration: "none" }}>{site.email.value}</a>
               </p>
               <p className="body" style={{ paddingTop: 20, color: "#fff" }}>
                 <span style={{ opacity: 0.7 }}>Phone — </span>{site.phone.value}

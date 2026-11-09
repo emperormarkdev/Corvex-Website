@@ -6,7 +6,7 @@ This website ships with **demonstration content** clearly flagged with `placehol
 - [ ] **Legal name** — Register correct legal entity name and replace `site.legalName`
 - [ ] **Head office address** — Replace with verified address; remove `demonstration` flags
 - [ ] **Phone number** — Replace display value with real number. Keep `tel:+2349040447548` or update both to match
-- [ ] **Email address** — Replace display value with real corporate email. Keep `mailto:emprormarktech@gmail.com` or update both
+- [ ] **Email address** — Replace display value with real corporate email. Keep `mailto:emperormarktech@gmail.com` or update both
 - [ ] **Regional offices** — Replace Port Harcourt and any others with verified offices
 - [ ] **Website URL** — Set correct `site.baseUrl`
 

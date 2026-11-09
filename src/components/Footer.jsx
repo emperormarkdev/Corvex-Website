@@ -138,9 +138,22 @@ export default function Footer() {
             justifyContent: "space-between",
           }}
         >
-          <p className="caption" style={{ color: "var(--color-grey)" }}>
-            © {YEAR} {site.name}. All rights reserved.
-          </p>
+          <div>
+            <p className="caption" style={{ color: "var(--color-grey)" }}>
+              © {YEAR} {site.name}. All rights reserved.
+            </p>
+            <p className="caption" style={{ color: "rgba(255,255,255,.6)", marginTop: 6 }}>
+              Designed and developed by{" "}
+              <a
+                href="mailto:emperormarktech@gmail.com"
+                style={{ color: "var(--color-safety)", textDecoration: "none" }}
+                onMouseEnter={(e) => (e.currentTarget.style.textDecoration = "underline")}
+                onMouseLeave={(e) => (e.currentTarget.style.textDecoration = "none")}
+              >
+                emperormarktech
+              </a>
+            </p>
+          </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 24px", alignItems: "center" }}>
             {footer.legal.map((l) => (
               <Link

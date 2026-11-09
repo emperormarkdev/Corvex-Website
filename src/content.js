@@ -26,7 +26,7 @@ export const site = {
   tagline: "Engineering & Energy Solutions",
   email: {
     value: "info@corvex-energy.ng",
-    href: "mailto:info@corvex-energy.ng",
+    href: "mailto:emperormarktech@gmail.com",
   },
   phone: {
     value: "+234 904 044 7548",
