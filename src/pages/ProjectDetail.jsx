@@ -18,11 +18,11 @@ export default function ProjectDetail({ slug }) {
   const facts = p.facts?.length
     ? p.facts
     : [
-        { k: "Client", v: projectDetail.client },
-        { k: "Location", v: p.location },
-        { k: "Sector", v: p.sector },
-        { k: "Result", v: p.result },
-      ];
+      { k: "Client", v: projectDetail.client },
+      { k: "Location", v: p.location },
+      { k: "Sector", v: p.sector },
+      { k: "Result", v: p.result },
+    ];
 
   return (
     <>
@@ -38,9 +38,6 @@ export default function ProjectDetail({ slug }) {
       {p.demonstration && (
         <div style={{ background: "var(--color-signal)", color: "#fff" }}>
           <div className="wrap" style={{ paddingTop: 14, paddingBottom: 14 }}>
-            <p className="caption" style={{ letterSpacing: ".08em", textTransform: "uppercase", margin: 0 }}>
-              Demonstration case study — written to show project detail and is not a verified contract record.
-            </p>
           </div>
         </div>
       )}
