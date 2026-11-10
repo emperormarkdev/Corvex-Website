@@ -112,7 +112,7 @@ export const services = {
       longDesc:
         "Front-end and detailed engineering for brownfield and greenfield assets. We carry scope from survey and feasibility through to issued-for-construction drawings, with every calculation checked, signed, and traceable to a standard.",
       tags: ["Design", "Inspection", "Consulting"],
-      image: { slot: "IMG-SVC-01", ratio: "16:10", brief: "Engineering review, drawings and site data", src: "/images/Overhead%20Industrial%20Blueprint%20Workshop.webp" },
+      image: { slot: "IMG-SVC-01", ratio: "16:10", brief: "Senior technical engineer inspecting industrial facility piping", src: "/images/expert.webp" },
       feature: true,
     },
     {
@@ -123,7 +123,7 @@ export const services = {
       longDesc:
         "The maintenance and fabrication backbone of a running plant: preventive and corrective maintenance, weld-managed fabrication, machining, scaffolding, and the logistics that keep a workfront supplied.",
       tags: ["Maintenance", "Fabrication", "Logistics"],
-      image: { slot: "IMG-SVC-02", ratio: "16:10", brief: "Workshop floor, fabrication in progress", src: "/images/Workshop%20floor,%20fabrication%20in%20progress.webp" },
+      image: { slot: "IMG-SVC-02", ratio: "16:10", brief: "Specialized pipeline welding and fabrication", src: "/images/welding.webp" },
       feature: true,
     },
     {
@@ -144,7 +144,7 @@ export const services = {
       longDesc:
         "Civil and structural delivery: earthworks, foundations, structural steel supply and erection, mechanical installation, roads, drainage, and the utilities that make a site operable.",
       tags: ["Civil", "Structural"],
-      image: { slot: "IMG-SVC-04", ratio: "16:10", brief: "Structural steel erection, daylight", src: "/images/Structural%20steel%20erection,%20daylight.webp" },
+      image: { slot: "IMG-SVC-04", ratio: "16:10", brief: "Heavy site excavation and earthworks in oilfield", src: "/images/excavator.webp" },
     },
     {
       n: "05",
@@ -154,7 +154,7 @@ export const services = {
       longDesc:
         "Field support across the hydrocarbon chain: well-site and flow-station services, pipeline construction, inspection and repair, terminal and refinery mechanical support, metering and flow assurance.",
       tags: ["Upstream", "Downstream"],
-      image: { slot: "IMG-SVC-05", ratio: "16:10", brief: "Pipeline corridor, inspection crew", src: "/images/Pipeline%20corridor,%20inspection%20crew.webp" },
+      image: { slot: "IMG-SVC-05", ratio: "16:10", brief: "Hydrocarbon pipeline corridor leading to refinery", src: "/images/pipeline-display.webp" },
     },
     {
       n: "06",
@@ -164,7 +164,7 @@ export const services = {
       longDesc:
         "Management systems that hold up under audit: HSE and quality systems, independent audits and gap closure, competence-based training, incident investigation, and certification readiness.",
       tags: ["Audits", "Training"],
-      image: { slot: "IMG-SVC-06", ratio: "16:10", brief: "Safety briefing, crew in PPE", src: "/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.webp" },
+      image: { slot: "IMG-SVC-06", ratio: "16:10", brief: "Certified CORVEX operations and HSE engineers", src: "/images/two-engineers.webp" },
     },
   ],
 };
@@ -496,7 +496,7 @@ export const projects = {
       result: "Proving completed to within 0.05% of reference.",
       summary:
         "Renaissance Energy (formerly Shell's onshore assets) engaged Corvex to replace two fiscal metering skids at the Escravos terminal. All fabrication and off-site proving was completed before the shutdown window. Tie-in was executed inside a single eight-hour planned outage with no impact on export schedules.",
-      image: { slot: "IMG-PROJ-01", ratio: "16:10", brief: "Refinery columns at dusk", src: "/images/Refinery%20columns%20at%20dusk.webp" },
+      image: { slot: "IMG-PROJ-05", ratio: "16:10", brief: "Technical engineering dossier and fabrication drawings", src: "/images/corvex-portfolio-binder.webp" },
       facts: [
         { k: "Client", v: "Renaissance Energy (formerly SPDC Onshore)" },
         { k: "Location", v: "Escravos Terminal, Delta State" },
@@ -557,7 +557,7 @@ export const projects = {
       result: "Erection completed 12 days ahead of programme.",
       summary:
         "Matrix Energy commissioned Corvex to supply, fabricate and erect 1,850 tonnes of structural steel across four warehouse units at their Lekki Free Zone distribution facility. The package included cladding, fire protection and full weld traceability documentation.",
-      image: { slot: "IMG-PROJ-04", ratio: "16:10", brief: "Structural steel erection, daylight", src: "/images/Structural%20steel%20erection,%20daylight.webp" },
+      image: { slot: "IMG-PROJ-06", ratio: "16:10", brief: "Structural steel erection, daylight", src: "/images/Structural%20steel%20erection,%20daylight.webp" },
       facts: [
         { k: "Client", v: "Matrix Energy Group" },
         { k: "Location", v: "Lekki Free Zone, Lagos State" },
@@ -655,7 +655,7 @@ export const insights = {
       readTime: "6 min read",
       excerpt:
         "A turnaround compresses months of risk into weeks. The difference between a clean shutdown and a serious incident is almost always decided before mobilisation, in how thoroughly the plan was tested.",
-      image: { slot: "IMG-NEWS-01", ratio: "16:9", brief: "Toolbox talk at sunrise", src: "/images/Night%20shift%20operations,%20control%20room%20glow.webp" },
+      image: { slot: "IMG-NEWS-01", ratio: "16:9", brief: "Field engineer conducting plant turnaround assessment", src: "/images/engineer-stairs.webp" },
       featured: true,
     },
     {
@@ -666,7 +666,7 @@ export const insights = {
       readTime: "4 min read",
       excerpt:
         "Re-audits are where integrity programmes earn their keep. First passes see what they were briefed to see; second passes see what was missed.",
-      image: { slot: "IMG-NEWS-02", ratio: "16:9", brief: "Ultrasonic inspection close-up", src: "/images/Process%20skids%20and%20pipe%20racks.webp" },
+      image: { slot: "IMG-NEWS-02", ratio: "16:9", brief: "Pipeline corridor integrity survey", src: "/images/pipeline-display.webp" },
     },
     {
       category: "Operations",
@@ -676,7 +676,7 @@ export const insights = {
       readTime: "5 min read",
       excerpt:
         "Most commissioning problems are built in during construction and discovered at start-up. Pre-commissioning as you build is the cheapest fix available.",
-      image: { slot: "IMG-NEWS-03", ratio: "16:9", brief: "Control room handover", src: "/images/Night%20shift%20operations,%20control%20room%20glow.webp" },
+      image: { slot: "IMG-NEWS-03", ratio: "16:9", brief: "Control room handover and DCS commissioning", src: "/images/Night%20shift%20operations,%20control%20room%20glow.webp" },
     },
   ],
 };
@@ -693,7 +693,7 @@ export const careers = {
   ],
   primary: { label: "View openings", href: "#/careers" },
   secondary: { label: "Join our talent network", href: "#/contact?interest=talent" },
-  image: { slot: "IMG-CAREERS", ratio: "4:3", brief: "Field team briefing, daylight", src: "/images/Structural%20steel%20erection,%20daylight.webp" },
+  image: { slot: "IMG-CAREERS", ratio: "4:3", brief: "CORVEX engineers on site in full safety gear", src: "/images/two-engineers.webp" },
 };
 
 export const contactCta = {
@@ -752,13 +752,22 @@ export const cookieBar = {
  * NOTE: displaying operator logos needs written permission before launch.
  */
 export const industryClients = [
+  { name: "NNPCL" },
+  { name: "Dangote Petroleum" },
   { name: "Shell" },
+  { name: "TotalEnergies" },
+  { name: "Chevron" },
+  { name: "ExxonMobil" },
+  { name: "Oando Energy" },
+  { name: "Sahara Group" },
   { name: "SLB" },
   { name: "Halliburton" },
-  { name: "Weatherford" },
   { name: "Baker Hughes" },
-  { name: "TotalEnergies" },
+  { name: "Weatherford" },
   { name: "Renaissance Energy" },
+  { name: "NLNG" },
+  { name: "Seplat Energy" },
+  { name: "Matrix Energy" },
 ];
 
 export * from "./contentPages";

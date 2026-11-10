@@ -28,7 +28,7 @@ export default function ApplyPage() {
           <p className="body-l mt-4" style={{ color: "var(--color-body-dark)" }}>
             Thank you, {form.name.split(" ")[0]}. Recruitment reviews applications within five business days.
           </p>
-          <p className="caption mt-4" style={{ color: "var(--color-grey)" }}>Demo form — connect to your ATS before launch.</p>
+          <p className="caption mt-4" style={{ color: "var(--color-grey)" }}>Our recruitment team reviews submissions on a rolling weekly basis.</p>
         </div>
       </div>
     );

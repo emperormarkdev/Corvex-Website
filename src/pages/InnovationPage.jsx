@@ -10,7 +10,7 @@ export default function InnovationPage() {
         title={approach.title}
         intro={approach.intro}
         breadcrumb={[{ label: "Innovation" }]}
-        image={{ slot: "IMG-INNO-01", ratio: "4:3", brief: "Digital field tablet over pipework, daylight", src: "/images/Overhead%20Industrial%20Blueprint%20Workshop.webp" }}
+        image={{ slot: "IMG-INNO-01", ratio: "4:3", brief: "Technical engineering documentation and as-built drawings", src: "/images/corvex-portfolio-binder.webp" }}
       />
 
       <section className="section blueprint" style={{ background: "#060607" }}>

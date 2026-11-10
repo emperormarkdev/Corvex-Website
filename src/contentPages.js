@@ -97,7 +97,7 @@ export const serviceDetail = {
     ],
     engagement:
       "If you have a modification, an inspection finding, an integrity concern or a design package that needs independent verification, send the drawing set, survey data or inspection report. A technical lead reviews the material and comes back with a scope, the constraints we can see, and a named engineer who would carry it. For larger packages we will hold a short scoping call with your operations and integrity teams before quoting, because the technical basis is usually clearer after thirty minutes with the people who run the asset.",
-    image: { slot: "IMG-SVC-D-01", ratio: "16:10", brief: "Engineering review, drawings and site data", src: "/images/Overhead%20Industrial%20Blueprint%20Workshop.webp" },
+    image: { slot: "IMG-SVC-D-01", ratio: "16:10", brief: "Senior technical engineer inspecting industrial facility piping", src: "/images/expert.webp" },
   },
   "industrial-support": {
     overview:
@@ -182,7 +182,7 @@ export const serviceDetail = {
     ],
     engagement:
       "Send us the plant, the equipment list, or the outage plan and the window you are working to. We will come back with a proposed work breakdown, the resource profile we think the window needs, and the tooling and spares we would expect to stage in advance. For an ongoing maintenance requirement we can start with a short condition and criticality survey, which gives both sides a factual basis for scoping the campaign properly.",
-    image: { slot: "IMG-SVC-D-02", ratio: "16:10", brief: "Workshop floor, fabrication in progress", src: "/images/Workshop%20floor,%20fabrication%20in%20progress.webp" },
+    image: { slot: "IMG-SVC-D-02", ratio: "16:10", brief: "Specialized pipeline welding and fabrication", src: "/images/welding.webp" },
   },
   "critical-operations": {
     overview:
@@ -351,7 +351,7 @@ export const serviceDetail = {
     ],
     engagement:
       "Send us the site plan, the geotechnical information available and the operating constraints on the ground. We will come back with a build sequence, the testing regime we would apply at each stage, and the seasonal and access assumptions the programme depends on. For work inside an operating facility we will also ask for buried service records early, because that is the single most common cause of a civil programme losing its first month.",
-    image: { slot: "IMG-SVC-D-04", ratio: "16:10", brief: "Structural steel erection, daylight", src: "/images/Structural%20steel%20erection,%20daylight.webp" },
+    image: { slot: "IMG-SVC-D-04", ratio: "16:10", brief: "Heavy site excavation and earthworks in oilfield", src: "/images/excavator.webp" },
   },
   "oil-gas-support": {
     overview:
@@ -435,7 +435,7 @@ export const serviceDetail = {
     ],
     engagement:
       "Send us the facility type, the system or line in question, and the operating constraint you are working within — product, pressure, whether the asset can be isolated, and how long an interruption can be tolerated. A technical lead will respond with the intervention approach, the isolation and certification requirements we would expect to apply, and the documentation that will be issued at close. For pipeline integrity work, the useful starting point is the most recent inspection data and the current operating envelope.",
-    image: { slot: "IMG-SVC-D-05", ratio: "16:10", brief: "Pipeline corridor, inspection crew", src: "/images/Pipeline%20corridor,%20inspection%20crew.webp" },
+    image: { slot: "IMG-SVC-D-05", ratio: "16:10", brief: "Hydrocarbon pipeline corridor leading to refinery", src: "/images/pipeline-display.webp" },
   },
   "hse-compliance": {
     overview:
@@ -520,7 +520,7 @@ export const serviceDetail = {
     ],
     engagement:
       "Send us the standard you are being assessed against, the current procedures if they exist, and the timeline you are working to — a client qualification review, a certification audit or a mobilisation date. We will respond with a gap assessment scope and the audit or remediation sequence it implies. For training requirements, the useful input is the task list and the current competence records, so the gap is identified against actual work rather than against a generic course catalogue.",
-    image: { slot: "IMG-SVC-D-06", ratio: "16:10", brief: "Safety briefing, crew in PPE", src: "/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.webp" },
+    image: { slot: "IMG-SVC-D-06", ratio: "16:10", brief: "Certified CORVEX operations and HSE engineers", src: "/images/two-engineers.webp" },
   },
 };
 

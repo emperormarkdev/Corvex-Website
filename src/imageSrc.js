@@ -17,18 +17,18 @@ export const imageSrc = {
   "IMG-ABOUT": img("about-image.webp"),
 
   // Services (overview + detail variants)
-  "IMG-SVC-01": img("Overhead Industrial Blueprint Workshop.webp"),
-  "IMG-SVC-02": img("Workshop floor, fabrication in progress.webp"),
+  "IMG-SVC-01": img("expert.webp"),
+  "IMG-SVC-02": img("welding.webp"),
   "IMG-SVC-03": img("Night shift operations, control room glow.webp"),
-  "IMG-SVC-04": img("Structural steel erection, daylight.webp"),
-  "IMG-SVC-05": img("Pipeline corridor, inspection crew.webp"),
-  "IMG-SVC-06": img("Worker in hard hat and red coveralls, thumbs-up.webp"),
-  "IMG-SVC-D-01": img("Overhead Industrial Blueprint Workshop.webp"),
-  "IMG-SVC-D-02": img("Workshop floor, fabrication in progress.webp"),
+  "IMG-SVC-04": img("excavator.webp"),
+  "IMG-SVC-05": img("pipeline-display.webp"),
+  "IMG-SVC-06": img("two-engineers.webp"),
+  "IMG-SVC-D-01": img("expert.webp"),
+  "IMG-SVC-D-02": img("welding.webp"),
   "IMG-SVC-D-03": img("Night shift operations, control room glow.webp"),
-  "IMG-SVC-D-04": img("Structural steel erection, daylight.webp"),
-  "IMG-SVC-D-05": img("Pipeline corridor, inspection crew.webp"),
-  "IMG-SVC-D-06": img("Worker in hard hat and red coveralls, thumbs-up.webp"),
+  "IMG-SVC-D-04": img("excavator.webp"),
+  "IMG-SVC-D-05": img("pipeline-display.webp"),
+  "IMG-SVC-D-06": img("two-engineers.webp"),
 
   // Sectors (overview + detail variants)
   "IMG-SECTOR-OG": img("Offshore platform at dusk.webp"),
@@ -46,6 +46,8 @@ export const imageSrc = {
   "IMG-PROJ-02": img("Process skids and pipe racks.webp"),
   "IMG-PROJ-03": img("Pipeline right-of-way, survey crew.webp"),
   "IMG-PROJ-04": img("Utility corridor construction.webp"),
+  "IMG-PROJ-05": img("corvex-portfolio-binder.webp"),
+  "IMG-PROJ-06": img("Structural steel erection, daylight.webp"),
 };
 
 export const getImageSrc = (slot) => (slot ? imageSrc[slot] || "" : "");

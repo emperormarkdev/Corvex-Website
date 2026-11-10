@@ -69,7 +69,7 @@ export default function SafetyPage() {
       <section className="section" style={{ background: "#000" }}>
         <div className="wrap hse-grid" style={{ display: "grid", gridTemplateColumns: "6fr 6fr", gap: 64, alignItems: "center" }}>
           <Reveal>
-            <ImageSlot slot="IMG-HSE-01" src="/images/Worker%20in%20hard%20hat%20and%20red%20coveralls,%20thumbs-up.webp" ratio="4:3" brief="PPE detail, hard hat and gloves" chamfer />
+            <ImageSlot slot="IMG-HSE-01" src="/images/corvex-safety-billboard.webp" ratio="16:9" brief="CORVEX Safety First, Safety for Me, Safety for All" chamfer />
           </Reveal>
           <div>
             <Reveal>

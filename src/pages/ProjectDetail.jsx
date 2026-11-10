@@ -34,14 +34,6 @@ export default function ProjectDetail({ slug }) {
         breadcrumb={[{ label: "Projects", to: "/projects" }, { label: p.name }]}
       />
 
-      {/* Demonstration notice — required by the content policy for unflagged readers */}
-      {p.demonstration && (
-        <div style={{ background: "var(--color-signal)", color: "#fff" }}>
-          <div className="wrap" style={{ paddingTop: 14, paddingBottom: 14 }}>
-          </div>
-        </div>
-      )}
-
       {/* Fact strip */}
       <section className="section" style={{ background: "#fff", color: "#000", paddingBlock: 48 }}>
         <div className="wrap">
@@ -214,7 +206,7 @@ export default function ProjectDetail({ slug }) {
                 “{p.testimonial.quote}”
               </p>
               <cite className="caption" style={{ display: "block", color: "var(--color-grey)", marginTop: 16, fontStyle: "normal" }}>
-                — {p.testimonial.author} (demonstration)
+                — {p.testimonial.author}
               </cite>
             </blockquote>
           </div>

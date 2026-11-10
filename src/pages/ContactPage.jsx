@@ -202,7 +202,7 @@ function composeMailto(form) {
       form.message,
       "",
       "---",
-      "Sent via corvex-site contact form (demonstration deployment)",
+      "Sent via official CORVEX website enquiry form",
     ].join("\n")
   );
   return `mailto:${site.email.href.replace("mailto:", "")}?subject=${subject}&body=${body}`;
