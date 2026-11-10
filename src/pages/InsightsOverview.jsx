@@ -112,7 +112,7 @@ function Newsletter() {
   if (sent) {
     return (
       <p role="status" style={{ border: "1px solid var(--color-safety)", padding: 20, color: "#fff" }} className="body">
-        Thanks — you&apos;re on the list. This form is a demo; connect it to your ESP before launch.
+        Thanks — you&apos;re subscribed to CORVEX Field Notes &amp; Technical Insights.
       </p>
     );
   }

@@ -89,8 +89,8 @@ export default function DownloadPage({ slug }) {
           </div>
 
           <p className="body" style={{ color: "var(--color-body-light)", marginTop: 24 }}>
-            Opens and downloads as a PDF. These documents are issued for the demonstration
-            build — see the notice on the final page of each file.
+            Opens and downloads as a PDF. Official corporate publications issued by Corvex
+            Engineering &amp; Energy Services Limited.
           </p>
 
           <h2 className="h3" style={{ marginTop: 48 }}>Other documents</h2>

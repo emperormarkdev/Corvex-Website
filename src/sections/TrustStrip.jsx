@@ -35,7 +35,7 @@ export default function TrustStrip() {
           ))}
         </div>
 
-        {/* Client name strip — Orbitron wordmarks */}
+        {/* Client name strip — Infinite Moving Marquee */}
         <Reveal delay={0.1}>
           <div className="hairline-t" style={{ marginTop: 56, paddingTop: 32 }}>
             <p
@@ -44,57 +44,95 @@ export default function TrustStrip() {
                 color: "var(--color-grey)",
                 letterSpacing: ".12em",
                 textTransform: "uppercase",
-                marginBottom: 28,
+                marginBottom: 24,
               }}
             >
-              Trusted across the supply chain
+              Trusted across major energy &amp; industrial operations
             </p>
-            <ul
-              className="logo-strip"
+            <div
+              className="marquee-container"
               style={{
-                listStyle: "none",
-                margin: 0,
-                padding: 0,
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "18px 40px",
-                alignItems: "center",
+                overflow: "hidden",
+                position: "relative",
+                width: "100%",
+                maskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+                WebkitMaskImage: "linear-gradient(to right, transparent, black 8%, black 92%, transparent)",
+                padding: "8px 0",
               }}
             >
-              {industryClients.map((c) => (
-                <li key={c.name} style={{ display: "flex", alignItems: "center" }}>
-                  <span
-                    style={{
-                      fontFamily: "var(--font-display)",
-                      fontWeight: 700,
-                      fontSize: 13,
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      color: "#fff",
-                      opacity: 0.6,
-                      transition: "opacity 200ms cubic-bezier(.22,1,.36,1)",
-                      cursor: "default",
-                      whiteSpace: "nowrap",
-                    }}
-                    onMouseEnter={(e) => (e.currentTarget.style.opacity = 1)}
-                    onMouseLeave={(e) => (e.currentTarget.style.opacity = 0.6)}
-                  >
-                    {c.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
+              <div className="marquee-track" style={{ display: "flex", width: "max-content", alignItems: "center" }}>
+                {[...industryClients, ...industryClients].map((c, idx) => (
+                  <div key={`${c.name}-${idx}`} style={{ display: "flex", alignItems: "center" }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        fontWeight: 700,
+                        fontSize: 14,
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: "#fff",
+                        opacity: 0.7,
+                        transition: "opacity 200ms cubic-bezier(.22,1,.36,1), color 200ms",
+                        cursor: "default",
+                        whiteSpace: "nowrap",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.opacity = "1";
+                        e.currentTarget.style.color = "var(--color-safety)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.opacity = "0.7";
+                        e.currentTarget.style.color = "#fff";
+                      }}
+                    >
+                      {c.name}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        color: "var(--color-safety)",
+                        opacity: 0.5,
+                        margin: "0 28px",
+                        fontSize: 8,
+                        userSelect: "none",
+                      }}
+                    >
+                      ◆
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>
       <style>{`
+        @keyframes marqueeScroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .marquee-track {
+          animation: marqueeScroll 32s linear infinite;
+        }
+        .marquee-container:hover .marquee-track {
+          animation-play-state: paused;
+        }
         @media (max-width: 768px) {
           .stats-grid { grid-template-columns: 1fr 1fr !important; }
           .stat-cell { border-left: none !important; padding-left: 0 !important; }
-          .logo-strip { gap: 14px 24px !important; }
+          .marquee-track { animation-duration: 24s; }
         }
-        @media (max-width: 480px) {
-          .logo-strip { gap: 12px 18px !important; }
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-track {
+            animation: none !important;
+            transform: none !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+          }
         }
       `}</style>
     </section>

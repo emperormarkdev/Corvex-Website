@@ -48,9 +48,6 @@ export default function ArticlePage({ slug }) {
             {body.map((p, i) => (
               <p key={i} className="body-l" style={{ color: "var(--color-body-light)", marginBottom: 24 }}>{p}</p>
             ))}
-            <p className="body-l" style={{ color: "var(--color-body-light)", marginBottom: 24 }}>
-              Placeholder article body — replace in <code style={{ background: "#f4f4f3", padding: "2px 6px" }}>articleBodies</code> in the content file.
-            </p>
           </div>
           <div />
         </div>
